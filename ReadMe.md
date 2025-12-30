@@ -6,7 +6,7 @@ This project will contain a high performance implementation that builds on the w
 
 https://www.tcpdump.org
 
-https://pcapplusplus.github.io/
+https://pcapplusplus.github.io
 
 
 ## The Open Markets Initiative
@@ -18,3 +18,5 @@ https://pcapplusplus.github.io/
 ## Student Projects
 
 The OMI is creating a series of projects for students in computer science in the US.
+
+AI use and professional coding processes are encouraged.
