@@ -1,17 +1,18 @@
 #pragma once
 
 // Zero-copy ethernet frame dissector
-// Parses: Ethernet II → optional 802.1Q VLAN → IPv4 → UDP/TCP
+// Parses: Ethernet II -> optional 802.1Q VLAN -> IPv4 -> UDP/TCP
 // All pointers reference the original buffer — no copies
 // Self-contained byte-order helpers via memcpy + shift-or
 
+#include <bit>
 #include <cstddef>
 #include <cstdint>
 #include <cstring>
 
 namespace packet {
 
-struct frame {
+struct Frame {
 
     // --- Public fields (pre-extracted, host byte order unless noted) ---
 
@@ -33,21 +34,21 @@ struct frame {
     std::uint32_t src_ip_host() const { return swap32(src_ip); }
     std::uint32_t dst_ip_host() const { return swap32(dst_ip); }
 
-    struct ip_octets {
+    struct IpOctets {
         std::uint8_t a, b, c, d;
     };
 
-    static ip_octets octets(std::uint32_t ip_net_order) {
-        ip_octets o;
+    static IpOctets octets(std::uint32_t ip_net_order) {
+        IpOctets o;
         std::memcpy(&o, &ip_net_order, 4);
         return o;
     }
 
     // --- Constructor: parse frame from raw ethernet data ---
 
-    frame() = default;
+    Frame() = default;
 
-    frame(const std::byte* data, std::uint32_t len)
+    Frame(const std::byte* data, std::uint32_t len)
         : data_(data), len_(len) {
         parse();
     }
@@ -62,12 +63,11 @@ private:
     std::uint32_t len_ = 0;
 
     // --- Self-contained byte-order helpers ---
-    // Read big-endian values via memcpy + shift-or.
-    // Compilers optimize this to movbe/bswap on x86.
 
     static std::uint16_t read_u16(const std::byte* p) {
-        return (static_cast<std::uint16_t>(p[0]) << 8)
-             |  static_cast<std::uint16_t>(p[1]);
+        std::uint16_t val;
+        std::memcpy(&val, p, sizeof(val));
+        return std::byteswap(val);
     }
 
     static std::uint32_t read_u32(const std::byte* p) {
