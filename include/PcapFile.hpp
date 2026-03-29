@@ -275,6 +275,16 @@ private:
         ts_low   = fix32(ts_low);
         caplen   = fix32(caplen);
 
+        if (block_len < 32) {
+            return false;
+        }
+
+        auto padded_caplen = (caplen + 3u) & ~std::uint32_t{3};
+        auto available_packet_bytes = block_len - 32u;
+        if (padded_caplen > available_packet_bytes) {
+            return false;
+        }
+
         pkt_data_ = block + 28;
         pkt_len_  = caplen;
 

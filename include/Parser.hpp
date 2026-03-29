@@ -15,17 +15,17 @@ namespace packet {
         explicit Parser(const std::string& path)
           : pcap{ path } {}
 
-        // load next pcap frame
+        // Advance to the next packet and refresh the cached frame view.
         bool next() {
-            return pcap.advance();
-        }
-
-        // parse the current frame into the cached view
-        void identify() {
+            if (!pcap.advance()) {
+                current_frame = packet::Frame{};
+                return false;
+            }
             current_frame = packet::Frame{ pcap.data(), pcap.length() };
+            return true;
         }
 
-        // get current frame
+        // Get the frame view for the most recent successful next().
         const Frame& frame() const {
             return current_frame;
         }

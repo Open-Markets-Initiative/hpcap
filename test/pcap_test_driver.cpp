@@ -44,7 +44,7 @@ static void test_file(const std::string& label,
 
     std::uint64_t udp_count = 0;
     std::uint64_t tcp_count = 0;
-    std::uint64_t invalid_count = 0;
+    std::uint64_t unsupported_or_malformed_count = 0;
     std::uint64_t vlan_count = 0;
     std::map<std::uint16_t, std::uint64_t> dst_port_dist;
     std::uint32_t min_payload = UINT32_MAX;
@@ -70,7 +70,7 @@ static void test_file(const std::string& label,
         max_len = std::max(max_len, len);
 
         if (!f.valid()) {
-            invalid_count++;
+            unsupported_or_malformed_count++;
         } else if (f.is_udp()) {
             udp_count++;
         } else if (f.is_tcp()) {
@@ -105,7 +105,7 @@ static void test_file(const std::string& label,
                     std::cout << "  vlan=" << f.vlan_id;
                 }
             } else {
-                std::cout << "  (not IPv4 UDP/TCP)";
+                std::cout << "  (unsupported or malformed frame)";
             }
             std::cout << std::endl;
         }
@@ -138,7 +138,7 @@ static void test_file(const std::string& label,
         std::cout << "--- Frame dissection ---" << std::endl;
         std::cout << "UDP: " << udp_count
                   << "  TCP: " << tcp_count
-                  << "  Non-IPv4/other: " << invalid_count
+                  << "  Unsupported/malformed: " << unsupported_or_malformed_count
                   << std::endl;
         if (vlan_count > 0) {
             std::cout << "VLAN-tagged: " << vlan_count << std::endl;
