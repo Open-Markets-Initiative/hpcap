@@ -1,0 +1,8 @@
+.vscode/
+
+*.exe
+*.ilk
+*.obj
+*.pdb
+
+test/pcap_test_driver
