@@ -47,5 +47,9 @@ if(HPCAP_BUILD_TESTS)
     add_executable(frame_tests tests/frame_tests.cpp)
     target_link_libraries(frame_tests PRIVATE hpcap::hpcap)
 
+    add_executable(pcap_tests tests/pcap_tests.cpp)
+    target_link_libraries(pcap_tests PRIVATE hpcap::hpcap)
+
     add_test(NAME frame_tests COMMAND frame_tests)
+    add_test(NAME pcap_tests COMMAND pcap_tests)
 endif()

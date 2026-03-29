@@ -51,6 +51,45 @@ std::array<std::byte, 58> make_vlan_tcp_frame() {
     };
 }
 
+std::array<std::byte, 14> make_arp_frame() {
+    return {
+        std::byte{0xff}, std::byte{0xff}, std::byte{0xff}, std::byte{0xff}, std::byte{0xff}, std::byte{0xff},
+        std::byte{0x00}, std::byte{0x11}, std::byte{0x22}, std::byte{0x33}, std::byte{0x44}, std::byte{0x55},
+        std::byte{0x08}, std::byte{0x06}
+    };
+}
+
+std::array<std::byte, 38> make_truncated_udp_frame() {
+    return {
+        std::byte{0x01}, std::byte{0x00}, std::byte{0x5e}, std::byte{0x00}, std::byte{0x1f}, std::byte{0x01},
+        std::byte{0x00}, std::byte{0x1c}, std::byte{0x73}, std::byte{0x15}, std::byte{0x3c}, std::byte{0x4c},
+        std::byte{0x08}, std::byte{0x00},
+        std::byte{0x45}, std::byte{0x00}, std::byte{0x00}, std::byte{0x20},
+        std::byte{0x59}, std::byte{0x73}, std::byte{0x40}, std::byte{0x00},
+        std::byte{0x3a}, std::byte{0x11}, std::byte{0x39}, std::byte{0x90},
+        std::byte{0xcd}, std::byte{0xd1}, std::byte{0xdf}, std::byte{0x46},
+        std::byte{0xe0}, std::byte{0x00}, std::byte{0x1f}, std::byte{0x01},
+        std::byte{0x37}, std::byte{0xe6}, std::byte{0x37}, std::byte{0xe6}
+    };
+}
+
+std::array<std::byte, 54> make_non_udp_tcp_ipv4_frame() {
+    return {
+        std::byte{0x00}, std::byte{0x11}, std::byte{0x22}, std::byte{0x33}, std::byte{0x44}, std::byte{0x55},
+        std::byte{0x66}, std::byte{0x77}, std::byte{0x88}, std::byte{0x99}, std::byte{0xaa}, std::byte{0xbb},
+        std::byte{0x08}, std::byte{0x00},
+        std::byte{0x45}, std::byte{0x00}, std::byte{0x00}, std::byte{0x28},
+        std::byte{0x00}, std::byte{0x01}, std::byte{0x00}, std::byte{0x00},
+        std::byte{0x40}, std::byte{0x01}, std::byte{0x00}, std::byte{0x00},
+        std::byte{0x0a}, std::byte{0x00}, std::byte{0x00}, std::byte{0x01},
+        std::byte{0x0a}, std::byte{0x00}, std::byte{0x00}, std::byte{0x02},
+        std::byte{0x08}, std::byte{0x00}, std::byte{0xf7}, std::byte{0xff},
+        std::byte{0x00}, std::byte{0x01}, std::byte{0x00}, std::byte{0x01},
+        std::byte{0xde}, std::byte{0xad}, std::byte{0xbe}, std::byte{0xef},
+        std::byte{0xca}, std::byte{0xfe}, std::byte{0xba}, std::byte{0xbe}
+    };
+}
+
 void test_udp_frame() {
     auto bytes = make_udp_frame();
     packet::Frame frame(bytes.data(), static_cast<std::uint32_t>(bytes.size()));
@@ -89,6 +128,28 @@ void test_truncated_frame() {
     expect(!frame.valid(), "expected truncated frame to be invalid");
 }
 
+void test_non_ipv4_frame() {
+    auto bytes = make_arp_frame();
+    packet::Frame frame(bytes.data(), static_cast<std::uint32_t>(bytes.size()));
+
+    expect(!frame.valid(), "expected non-IPv4 ethernet frame to be invalid");
+}
+
+void test_truncated_udp_header() {
+    auto bytes = make_truncated_udp_frame();
+    packet::Frame frame(bytes.data(), static_cast<std::uint32_t>(bytes.size()));
+
+    expect(!frame.valid(), "expected truncated UDP frame to be invalid");
+}
+
+void test_non_udp_tcp_ipv4_frame() {
+    auto bytes = make_non_udp_tcp_ipv4_frame();
+    packet::Frame frame(bytes.data(), static_cast<std::uint32_t>(bytes.size()));
+
+    expect(!frame.valid(), "expected non-UDP/TCP IPv4 frame to remain invalid");
+    expect(frame.ip_protocol == 1, "expected ICMP protocol to still be decoded");
+}
+
 } // namespace
 
 int main() {
@@ -96,6 +157,9 @@ int main() {
         test_udp_frame();
         test_vlan_tcp_frame();
         test_truncated_frame();
+        test_non_ipv4_frame();
+        test_truncated_udp_header();
+        test_non_udp_tcp_ipv4_frame();
         std::cout << "frame_tests passed" << std::endl;
         return 0;
     } catch (const std::exception& ex) {
