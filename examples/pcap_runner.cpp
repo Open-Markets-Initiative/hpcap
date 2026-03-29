@@ -1,11 +1,12 @@
-#include "../include/PcapFile.hpp"
-#include "../include/frame.hpp"
+#include "PcapFile.hpp"
+#include "frame.hpp"
 
 #include <algorithm>
 #include <chrono>
 #include <cstdint>
 #include <iomanip>
 #include <iostream>
+#include <limits>
 #include <map>
 #include <string>
 #include <vector>
@@ -25,9 +26,9 @@ static void fmt_ip(std::uint32_t ip_net) {
               << static_cast<unsigned>(o.d);
 }
 
-static void test_file(const std::string& label,
-                      const std::string& path,
-                      std::uint64_t max_packets = 0) {
+static void inspect_file(const std::string& label,
+                         const std::string& path,
+                         std::uint64_t max_packets = 0) {
     std::cout << "=== " << label << " ===" << std::endl;
     std::cout << "Path: " << path << std::endl;
 
@@ -38,7 +39,7 @@ static void test_file(const std::string& label,
     std::uint64_t first_ts = 0;
     std::uint64_t last_ts = 0;
     std::uint64_t prev_ts = 0;
-    std::uint32_t min_len = UINT32_MAX;
+    std::uint32_t min_len = std::numeric_limits<std::uint32_t>::max();
     std::uint32_t max_len = 0;
     bool monotonic = true;
 
@@ -47,7 +48,7 @@ static void test_file(const std::string& label,
     std::uint64_t unsupported_or_malformed_count = 0;
     std::uint64_t vlan_count = 0;
     std::map<std::uint16_t, std::uint64_t> dst_port_dist;
-    std::uint32_t min_payload = UINT32_MAX;
+    std::uint32_t min_payload = std::numeric_limits<std::uint32_t>::max();
     std::uint32_t max_payload = 0;
     std::uint64_t total_payload = 0;
 
@@ -174,7 +175,7 @@ int main(int argc, char** argv) {
     }
 
     for (int i = 1; i < argc; ++i) {
-        test_file(argv[i], argv[i], 10000);
+        inspect_file(argv[i], argv[i], 10000);
     }
 
     return 0;
