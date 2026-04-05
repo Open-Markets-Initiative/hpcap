@@ -52,4 +52,11 @@ if(HPCAP_BUILD_TESTS)
 
     add_test(NAME frame_tests COMMAND frame_tests)
     add_test(NAME pcap_tests COMMAND pcap_tests)
+
+    if(HPCAP_ENABLE_ZLIB)
+        add_executable(pcap_roundtrip_tests tests/pcap_roundtrip_tests.cpp)
+        target_link_libraries(pcap_roundtrip_tests PRIVATE hpcap::hpcap)
+
+        add_test(NAME pcap_roundtrip_tests COMMAND pcap_roundtrip_tests)
+    endif()
 endif()
