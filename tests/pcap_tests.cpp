@@ -2,7 +2,6 @@
 #include "PcapFile.hpp"
 #include "frame.hpp"
 
-#include <array>
 #include <cstddef>
 #include <cstdint>
 #include <exception>
@@ -21,42 +20,6 @@ void expect(bool condition, const std::string& message) {
     }
 }
 
-std::array<std::byte, 46> make_udp_frame() {
-    return {
-        std::byte{0x01}, std::byte{0x00}, std::byte{0x5e}, std::byte{0x00}, std::byte{0x1f}, std::byte{0x01},
-        std::byte{0x00}, std::byte{0x1c}, std::byte{0x73}, std::byte{0x15}, std::byte{0x3c}, std::byte{0x4c},
-        std::byte{0x08}, std::byte{0x00},
-        std::byte{0x45}, std::byte{0x00}, std::byte{0x00}, std::byte{0x20},
-        std::byte{0x59}, std::byte{0x73}, std::byte{0x40}, std::byte{0x00},
-        std::byte{0x3a}, std::byte{0x11}, std::byte{0x39}, std::byte{0x90},
-        std::byte{0xcd}, std::byte{0xd1}, std::byte{0xdf}, std::byte{0x46},
-        std::byte{0xe0}, std::byte{0x00}, std::byte{0x1f}, std::byte{0x01},
-        std::byte{0x37}, std::byte{0xe6}, std::byte{0x37}, std::byte{0xe6},
-        std::byte{0x00}, std::byte{0x0c}, std::byte{0x8e}, std::byte{0x18},
-        std::byte{0xde}, std::byte{0xad}, std::byte{0xbe}, std::byte{0xef}
-    };
-}
-
-std::array<std::byte, 58> make_vlan_tcp_frame() {
-    return {
-        std::byte{0x00}, std::byte{0x11}, std::byte{0x22}, std::byte{0x33}, std::byte{0x44}, std::byte{0x55},
-        std::byte{0x66}, std::byte{0x77}, std::byte{0x88}, std::byte{0x99}, std::byte{0xaa}, std::byte{0xbb},
-        std::byte{0x81}, std::byte{0x00},
-        std::byte{0x00}, std::byte{0x64},
-        std::byte{0x08}, std::byte{0x00},
-        std::byte{0x45}, std::byte{0x00}, std::byte{0x00}, std::byte{0x28},
-        std::byte{0x12}, std::byte{0x34}, std::byte{0x40}, std::byte{0x00},
-        std::byte{0x40}, std::byte{0x06}, std::byte{0x00}, std::byte{0x00},
-        std::byte{0xc0}, std::byte{0xa8}, std::byte{0x01}, std::byte{0x0a},
-        std::byte{0xc0}, std::byte{0xa8}, std::byte{0x01}, std::byte{0x14},
-        std::byte{0x30}, std::byte{0x39}, std::byte{0x00}, std::byte{0x50},
-        std::byte{0x00}, std::byte{0x00}, std::byte{0x00}, std::byte{0x00},
-        std::byte{0x00}, std::byte{0x00}, std::byte{0x00}, std::byte{0x00},
-        std::byte{0x50}, std::byte{0x02}, std::byte{0x20}, std::byte{0x00},
-        std::byte{0x00}, std::byte{0x00}, std::byte{0x00}, std::byte{0x00}
-    };
-}
-
 void append_u32_le(std::vector<std::byte>& out, std::uint32_t value) {
     out.push_back(static_cast<std::byte>(value & 0xffu));
     out.push_back(static_cast<std::byte>((value >> 8) & 0xffu));
@@ -64,16 +27,17 @@ void append_u32_le(std::vector<std::byte>& out, std::uint32_t value) {
     out.push_back(static_cast<std::byte>((value >> 24) & 0xffu));
 }
 
-void append_bytes(std::vector<std::byte>& out, const std::byte* data, std::size_t size) {
-    out.insert(out.end(), data, data + size);
+void append_bytes(std::vector<std::byte>& out, const unsigned char* data, std::size_t size) {
+    auto first = reinterpret_cast<const std::byte*>(data);
+    out.insert(out.end(), first, first + size);
 }
 
-std::vector<std::byte> make_classic_pcap() {
-    auto udp = make_udp_frame();
-    auto tcp = make_vlan_tcp_frame();
-
+std::vector<std::byte> make_classic_pcap(const unsigned char* udp,
+                                         std::size_t udp_size,
+                                         const unsigned char* tcp,
+                                         std::size_t tcp_size) {
     std::vector<std::byte> bytes;
-    bytes.reserve(24 + 16 + udp.size() + 16 + tcp.size());
+    bytes.reserve(24 + 16 + udp_size + 16 + tcp_size);
 
     append_u32_le(bytes, 0xa1b2c3d4u);
     bytes.push_back(std::byte{0x02});
@@ -87,15 +51,15 @@ std::vector<std::byte> make_classic_pcap() {
 
     append_u32_le(bytes, 1u);
     append_u32_le(bytes, 250u);
-    append_u32_le(bytes, static_cast<std::uint32_t>(udp.size()));
-    append_u32_le(bytes, static_cast<std::uint32_t>(udp.size()));
-    append_bytes(bytes, udp.data(), udp.size());
+    append_u32_le(bytes, static_cast<std::uint32_t>(udp_size));
+    append_u32_le(bytes, static_cast<std::uint32_t>(udp_size));
+    append_bytes(bytes, udp, udp_size);
 
     append_u32_le(bytes, 2u);
     append_u32_le(bytes, 500u);
-    append_u32_le(bytes, static_cast<std::uint32_t>(tcp.size()));
-    append_u32_le(bytes, static_cast<std::uint32_t>(tcp.size()));
-    append_bytes(bytes, tcp.data(), tcp.size());
+    append_u32_le(bytes, static_cast<std::uint32_t>(tcp_size));
+    append_u32_le(bytes, static_cast<std::uint32_t>(tcp_size));
+    append_bytes(bytes, tcp, tcp_size);
 
     return bytes;
 }
@@ -128,7 +92,21 @@ private:
 };
 
 void test_pcap_file_reads_packets() {
-    TempFile file(make_classic_pcap());
+    unsigned char udp_bytes[] = {
+        0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
+        0x08, 0x00, 0x45, 0x00, 0x00, 0x20, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
+        0x39, 0x90, 0xcd, 0xd1, 0xdf, 0x46, 0xe0, 0x00, 0x1f, 0x01, 0x37, 0xe6,
+        0x37, 0xe6, 0x00, 0x0c, 0x8e, 0x18, 0xde, 0xad, 0xbe, 0xef
+    };
+    unsigned char tcp_bytes[] = {
+        0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb,
+        0x81, 0x00, 0x00, 0x64, 0x08, 0x00, 0x45, 0x00, 0x00, 0x28, 0x12, 0x34,
+        0x40, 0x00, 0x40, 0x06, 0x00, 0x00, 0xc0, 0xa8, 0x01, 0x0a, 0xc0, 0xa8,
+        0x01, 0x14, 0x30, 0x39, 0x00, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x50, 0x02, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00
+    };
+
+    TempFile file(make_classic_pcap(udp_bytes, sizeof(udp_bytes), tcp_bytes, sizeof(tcp_bytes)));
     packet::PcapFile pcap(file.path().string());
 
     expect(pcap.advance(), "expected first packet");
@@ -154,7 +132,21 @@ void test_pcap_file_reads_packets() {
 }
 
 void test_parser_tracks_current_frame() {
-    TempFile file(make_classic_pcap());
+    unsigned char udp_bytes[] = {
+        0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
+        0x08, 0x00, 0x45, 0x00, 0x00, 0x20, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
+        0x39, 0x90, 0xcd, 0xd1, 0xdf, 0x46, 0xe0, 0x00, 0x1f, 0x01, 0x37, 0xe6,
+        0x37, 0xe6, 0x00, 0x0c, 0x8e, 0x18, 0xde, 0xad, 0xbe, 0xef
+    };
+    unsigned char tcp_bytes[] = {
+        0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb,
+        0x81, 0x00, 0x00, 0x64, 0x08, 0x00, 0x45, 0x00, 0x00, 0x28, 0x12, 0x34,
+        0x40, 0x00, 0x40, 0x06, 0x00, 0x00, 0xc0, 0xa8, 0x01, 0x0a, 0xc0, 0xa8,
+        0x01, 0x14, 0x30, 0x39, 0x00, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x50, 0x02, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00
+    };
+
+    TempFile file(make_classic_pcap(udp_bytes, sizeof(udp_bytes), tcp_bytes, sizeof(tcp_bytes)));
     packet::Parser parser(file.path().string());
 
     expect(parser.next(), "expected parser to yield first frame");
