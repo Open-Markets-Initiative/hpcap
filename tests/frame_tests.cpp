@@ -1,20 +1,11 @@
 #include "frame.hpp"
 
+#include <gtest/gtest.h>
+
 #include <cstddef>
 #include <cstdint>
-#include <iostream>
-#include <stdexcept>
-#include <string>
 
-namespace {
-
-void expect(bool condition, const std::string& message) {
-    if (!condition) {
-        throw std::runtime_error(message);
-    }
-}
-
-void test_udp_frame() {
+TEST(FrameTest, UdpFrame) {
     unsigned char bytes[] = {
         0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
         0x08, 0x00, 0x45, 0x00, 0x00, 0x28, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
@@ -25,21 +16,27 @@ void test_udp_frame() {
     packet::Frame frame(reinterpret_cast<const std::byte*>(bytes),
                         static_cast<std::uint32_t>(sizeof(bytes)));
 
-    expect(frame.valid(), "expected UDP frame to be valid");
-    expect(frame.is_udp(), "expected UDP protocol");
-    expect(!frame.is_tcp(), "did not expect TCP protocol");
-    expect(frame.src_port == 14310, "unexpected UDP source port");
-    expect(frame.dst_port == 14310, "unexpected UDP destination port");
-    expect(frame.payload_len == 4, "unexpected UDP payload length");
-    expect(frame.vlan_id == 0, "did not expect VLAN tag");
+    EXPECT_TRUE(frame.valid());
+    EXPECT_TRUE(frame.is_udp());
+    EXPECT_FALSE(frame.is_tcp());
+    EXPECT_EQ(frame.src_port, 14310);
+    EXPECT_EQ(frame.dst_port, 14310);
+    EXPECT_EQ(frame.payload_len, 4u);
+    EXPECT_EQ(frame.vlan_id, 0);
 
     auto src = packet::Frame::octets(frame.src_ip);
     auto dst = packet::Frame::octets(frame.dst_ip);
-    expect(src.a == 205 && src.b == 209 && src.c == 223 && src.d == 70, "unexpected source IP");
-    expect(dst.a == 224 && dst.b == 0 && dst.c == 31 && dst.d == 1, "unexpected destination IP");
+    EXPECT_EQ(src.a, 205);
+    EXPECT_EQ(src.b, 209);
+    EXPECT_EQ(src.c, 223);
+    EXPECT_EQ(src.d, 70);
+    EXPECT_EQ(dst.a, 224);
+    EXPECT_EQ(dst.b, 0);
+    EXPECT_EQ(dst.c, 31);
+    EXPECT_EQ(dst.d, 1);
 }
 
-void test_vlan_tcp_frame() {
+TEST(FrameTest, VlanTcpFrame) {
     unsigned char bytes[] = {
         0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb,
         0x81, 0x00, 0x00, 0x64, 0x08, 0x00, 0x45, 0x00, 0x00, 0x28, 0x12, 0x34,
@@ -51,24 +48,24 @@ void test_vlan_tcp_frame() {
     packet::Frame frame(reinterpret_cast<const std::byte*>(bytes),
                         static_cast<std::uint32_t>(sizeof(bytes)));
 
-    expect(frame.valid(), "expected TCP frame to be valid");
-    expect(frame.is_tcp(), "expected TCP protocol");
-    expect(!frame.is_udp(), "did not expect UDP protocol");
-    expect(frame.vlan_id == 100, "unexpected VLAN id");
-    expect(frame.src_port == 12345, "unexpected TCP source port");
-    expect(frame.dst_port == 80, "unexpected TCP destination port");
-    expect(frame.payload_len == 0, "unexpected TCP payload length");
+    EXPECT_TRUE(frame.valid());
+    EXPECT_TRUE(frame.is_tcp());
+    EXPECT_FALSE(frame.is_udp());
+    EXPECT_EQ(frame.vlan_id, 100);
+    EXPECT_EQ(frame.src_port, 12345);
+    EXPECT_EQ(frame.dst_port, 80);
+    EXPECT_EQ(frame.payload_len, 0u);
 }
 
-void test_truncated_frame() {
+TEST(FrameTest, TruncatedFrame) {
     unsigned char bytes[] = { 0x00 };
 
     packet::Frame frame(reinterpret_cast<const std::byte*>(bytes), 0);
 
-    expect(!frame.valid(), "expected truncated frame to be invalid");
+    EXPECT_FALSE(frame.valid());
 }
 
-void test_non_ipv4_frame() {
+TEST(FrameTest, NonIpv4Frame) {
     unsigned char bytes[] = {
         0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0x00, 0x11, 0x22, 0x33, 0x44, 0x55,
         0x08, 0x06
@@ -77,10 +74,10 @@ void test_non_ipv4_frame() {
     packet::Frame frame(reinterpret_cast<const std::byte*>(bytes),
                         static_cast<std::uint32_t>(sizeof(bytes)));
 
-    expect(!frame.valid(), "expected non-IPv4 ethernet frame to be invalid");
+    EXPECT_FALSE(frame.valid());
 }
 
-void test_truncated_udp_header() {
+TEST(FrameTest, TruncatedUdpHeader) {
     unsigned char bytes[] = {
         0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
         0x08, 0x00, 0x45, 0x00, 0x00, 0x20, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
@@ -91,10 +88,10 @@ void test_truncated_udp_header() {
     packet::Frame frame(reinterpret_cast<const std::byte*>(bytes),
                         static_cast<std::uint32_t>(sizeof(bytes)));
 
-    expect(!frame.valid(), "expected truncated UDP frame to be invalid");
+    EXPECT_FALSE(frame.valid());
 }
 
-void test_non_udp_tcp_ipv4_frame() {
+TEST(FrameTest, NonUdpTcpIpv4Frame) {
     unsigned char bytes[] = {
         0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb,
         0x08, 0x00, 0x45, 0x00, 0x00, 0x28, 0x00, 0x01, 0x00, 0x00, 0x40, 0x01,
@@ -106,24 +103,6 @@ void test_non_udp_tcp_ipv4_frame() {
     packet::Frame frame(reinterpret_cast<const std::byte*>(bytes),
                         static_cast<std::uint32_t>(sizeof(bytes)));
 
-    expect(!frame.valid(), "expected non-UDP/TCP IPv4 frame to remain invalid");
-    expect(frame.ip_protocol == 1, "expected ICMP protocol to still be decoded");
-}
-
-} // namespace
-
-int main() {
-    try {
-        test_udp_frame();
-        test_vlan_tcp_frame();
-        test_truncated_frame();
-        test_non_ipv4_frame();
-        test_truncated_udp_header();
-        test_non_udp_tcp_ipv4_frame();
-        std::cout << "frame_tests passed" << std::endl;
-        return 0;
-    } catch (const std::exception& ex) {
-        std::cerr << "frame_tests failed: " << ex.what() << std::endl;
-        return 1;
-    }
+    EXPECT_FALSE(frame.valid());
+    EXPECT_EQ(frame.ip_protocol, 1);
 }

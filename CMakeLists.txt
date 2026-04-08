@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.20)
 
 project(hpcap LANGUAGES CXX)
 
+include(FetchContent)
+
 option(HPCAP_BUILD_EXAMPLES "Build example programs" ON)
 option(HPCAP_BUILD_TESTS "Build unit tests" ON)
 option(HPCAP_ENABLE_ZLIB "Enable gzip support with zlib" OFF)
@@ -43,20 +45,31 @@ endif()
 
 if(HPCAP_BUILD_TESTS)
     enable_testing()
+    include(GoogleTest)
+
+    find_package(GTest CONFIG QUIET)
+    if(NOT GTest_FOUND)
+        FetchContent_Declare(
+            googletest
+            URL https://github.com/google/googletest/archive/refs/tags/v1.17.0.zip
+        )
+        set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+        FetchContent_MakeAvailable(googletest)
+    endif()
 
     add_executable(frame_tests tests/frame_tests.cpp)
-    target_link_libraries(frame_tests PRIVATE hpcap::hpcap)
+    target_link_libraries(frame_tests PRIVATE hpcap::hpcap GTest::gtest_main)
 
     add_executable(pcap_tests tests/pcap_tests.cpp)
-    target_link_libraries(pcap_tests PRIVATE hpcap::hpcap)
+    target_link_libraries(pcap_tests PRIVATE hpcap::hpcap GTest::gtest_main)
 
-    add_test(NAME frame_tests COMMAND frame_tests)
-    add_test(NAME pcap_tests COMMAND pcap_tests)
+    gtest_discover_tests(frame_tests)
+    gtest_discover_tests(pcap_tests)
 
     if(HPCAP_ENABLE_ZLIB)
         add_executable(pcap_roundtrip_tests tests/pcap_roundtrip_tests.cpp)
-        target_link_libraries(pcap_roundtrip_tests PRIVATE hpcap::hpcap)
+        target_link_libraries(pcap_roundtrip_tests PRIVATE hpcap::hpcap GTest::gtest_main)
 
-        add_test(NAME pcap_roundtrip_tests COMMAND pcap_roundtrip_tests)
+        gtest_discover_tests(pcap_roundtrip_tests)
     endif()
 endif()

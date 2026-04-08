@@ -1,14 +1,13 @@
 #include "PcapFile.hpp"
 #include "frame.hpp"
 
+#include <gtest/gtest.h>
+
 #include <cstddef>
 #include <cstdint>
-#include <exception>
 #include <filesystem>
 #include <fstream>
-#include <iostream>
 #include <stdexcept>
-#include <string>
 #include <vector>
 
 #include <zlib.h>
@@ -19,12 +18,6 @@ struct PacketView {
     const unsigned char* data;
     std::size_t size;
 };
-
-void expect(bool condition, const std::string& message) {
-    if (!condition) {
-        throw std::runtime_error(message);
-    }
-}
 
 void append_u32_le(std::vector<std::byte>& out, std::uint32_t value) {
     out.push_back(static_cast<std::byte>(value & 0xffu));
@@ -138,7 +131,7 @@ std::uint64_t count_packets(const std::filesystem::path& path) {
     return count;
 }
 
-void test_raw_and_gzip_packet_counts_match() {
+TEST(PcapRoundTripTest, RawAndGzipPacketCountsMatch) {
     unsigned char udp_bytes[] = {
         0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
         0x08, 0x00, 0x45, 0x00, 0x00, 0x20, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
@@ -168,20 +161,8 @@ void test_raw_and_gzip_packet_counts_match() {
     const auto raw_count = count_packets(raw_file.path());
     const auto gzip_count = count_packets(gzip_file.path());
 
-    expect(raw_count == packets.size(), "unexpected raw packet count");
-    expect(gzip_count == packets.size(), "unexpected gzip packet count");
-    expect(raw_count == gzip_count, "raw and gzip packet counts should match");
+    EXPECT_EQ(raw_count, packets.size());
+    EXPECT_EQ(gzip_count, packets.size());
+    EXPECT_EQ(raw_count, gzip_count);
 }
-
 } // namespace
-
-int main() {
-    try {
-        test_raw_and_gzip_packet_counts_match();
-        std::cout << "pcap_roundtrip_tests passed" << std::endl;
-        return 0;
-    } catch (const std::exception& ex) {
-        std::cerr << "pcap_roundtrip_tests failed: " << ex.what() << std::endl;
-        return 1;
-    }
-}

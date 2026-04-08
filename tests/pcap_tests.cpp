@@ -2,23 +2,16 @@
 #include "PcapFile.hpp"
 #include "frame.hpp"
 
+#include <gtest/gtest.h>
+
 #include <cstddef>
 #include <cstdint>
-#include <exception>
 #include <filesystem>
 #include <fstream>
-#include <iostream>
 #include <stdexcept>
-#include <string>
 #include <vector>
 
 namespace {
-
-void expect(bool condition, const std::string& message) {
-    if (!condition) {
-        throw std::runtime_error(message);
-    }
-}
 
 void append_u32_le(std::vector<std::byte>& out, std::uint32_t value) {
     out.push_back(static_cast<std::byte>(value & 0xffu));
@@ -91,7 +84,7 @@ private:
     std::filesystem::path path_;
 };
 
-void test_pcap_file_reads_packets() {
+TEST(PcapTest, ReadsPacketsFromClassicPcap) {
     unsigned char udp_bytes[] = {
         0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
         0x08, 0x00, 0x45, 0x00, 0x00, 0x20, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
@@ -109,29 +102,29 @@ void test_pcap_file_reads_packets() {
     TempFile file(make_classic_pcap(udp_bytes, sizeof(udp_bytes), tcp_bytes, sizeof(tcp_bytes)));
     packet::PcapFile pcap(file.path().string());
 
-    expect(pcap.advance(), "expected first packet");
-    expect(pcap.timestamp_ns() == 1000250000ULL, "unexpected first packet timestamp");
-    expect(pcap.length() == 46u, "unexpected first packet length");
+    ASSERT_TRUE(pcap.advance());
+    EXPECT_EQ(pcap.timestamp_ns(), 1000250000ULL);
+    EXPECT_EQ(pcap.length(), 46u);
 
     packet::Frame first(pcap.data(), pcap.length());
-    expect(first.valid(), "expected first packet frame to be valid");
-    expect(first.is_udp(), "expected first packet to be UDP");
-    expect(first.dst_port == 14310u, "unexpected first packet destination port");
+    EXPECT_TRUE(first.valid());
+    EXPECT_TRUE(first.is_udp());
+    EXPECT_EQ(first.dst_port, 14310u);
 
-    expect(pcap.advance(), "expected second packet");
-    expect(pcap.timestamp_ns() == 2000500000ULL, "unexpected second packet timestamp");
-    expect(pcap.length() == 58u, "unexpected second packet length");
+    ASSERT_TRUE(pcap.advance());
+    EXPECT_EQ(pcap.timestamp_ns(), 2000500000ULL);
+    EXPECT_EQ(pcap.length(), 58u);
 
     packet::Frame second(pcap.data(), pcap.length());
-    expect(second.valid(), "expected second packet frame to be valid");
-    expect(second.is_tcp(), "expected second packet to be TCP");
-    expect(second.vlan_id == 100u, "unexpected second packet VLAN id");
+    EXPECT_TRUE(second.valid());
+    EXPECT_TRUE(second.is_tcp());
+    EXPECT_EQ(second.vlan_id, 100u);
 
-    expect(!pcap.advance(), "expected end of file after two packets");
-    expect(pcap.done(), "expected pcap reader to be done");
+    EXPECT_FALSE(pcap.advance());
+    EXPECT_TRUE(pcap.done());
 }
 
-void test_parser_tracks_current_frame() {
+TEST(PcapTest, ParserTracksCurrentFrame) {
     unsigned char udp_bytes[] = {
         0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
         0x08, 0x00, 0x45, 0x00, 0x00, 0x20, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
@@ -149,29 +142,17 @@ void test_parser_tracks_current_frame() {
     TempFile file(make_classic_pcap(udp_bytes, sizeof(udp_bytes), tcp_bytes, sizeof(tcp_bytes)));
     packet::Parser parser(file.path().string());
 
-    expect(parser.next(), "expected parser to yield first frame");
-    expect(parser.frame().valid(), "expected parser current frame to be valid");
-    expect(parser.frame().is_udp(), "expected parser first frame to be UDP");
+    ASSERT_TRUE(parser.next());
+    EXPECT_TRUE(parser.frame().valid());
+    EXPECT_TRUE(parser.frame().is_udp());
 
-    expect(parser.next(), "expected parser to yield second frame");
-    expect(parser.frame().valid(), "expected parser second frame to be valid");
-    expect(parser.frame().is_tcp(), "expected parser second frame to be TCP");
-    expect(parser.frame().vlan_id == 100u, "unexpected parser second frame VLAN id");
+    ASSERT_TRUE(parser.next());
+    EXPECT_TRUE(parser.frame().valid());
+    EXPECT_TRUE(parser.frame().is_tcp());
+    EXPECT_EQ(parser.frame().vlan_id, 100u);
 
-    expect(!parser.next(), "expected parser end of file");
-    expect(!parser.frame().valid(), "expected parser cached frame to reset after EOF");
+    EXPECT_FALSE(parser.next());
+    EXPECT_FALSE(parser.frame().valid());
 }
 
 } // namespace
-
-int main() {
-    try {
-        test_pcap_file_reads_packets();
-        test_parser_tracks_current_frame();
-        std::cout << "pcap_tests passed" << std::endl;
-        return 0;
-    } catch (const std::exception& ex) {
-        std::cerr << "pcap_tests failed: " << ex.what() << std::endl;
-        return 1;
-    }
-}
