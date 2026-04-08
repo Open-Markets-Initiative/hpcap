@@ -20,3 +20,41 @@ https://pcapplusplus.github.io
 The OMI is creating a series of projects for students in computer science in the US.
 
 AI use and professional coding processes are encouraged.
+
+## Build
+
+This repository now builds as a standalone CMake project.
+
+Configure:
+
+```powershell
+cmake -S . -B build
+```
+
+Build:
+
+```powershell
+cmake --build build
+```
+
+Optional compression backends can be enabled at configure time:
+
+```powershell
+cmake -S . -B build -DHPCAP_ENABLE_ZLIB=ON -DHPCAP_ENABLE_BZIP2=ON -DHPCAP_ENABLE_LZMA=ON
+```
+
+## Example Runner
+
+The example runner reads one or more pcap files and prints a short packet summary:
+
+```powershell
+.\build\pcap_runner.exe C:\path\to\capture.pcap
+```
+
+## Unit Tests
+
+Run the initial unit test suite with CTest:
+
+```powershell
+ctest --test-dir build --output-on-failure
+```

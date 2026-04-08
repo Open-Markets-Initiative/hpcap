@@ -5,7 +5,6 @@
 // All pointers reference the original buffer — no copies
 // Self-contained byte-order helpers via memcpy + shift-or
 
-#include <bit>
 #include <cstddef>
 #include <cstdint>
 #include <cstring>
@@ -64,17 +63,21 @@ private:
 
     // --- Self-contained byte-order helpers ---
 
+    static std::uint16_t bswap16(std::uint16_t v) {
+        return static_cast<std::uint16_t>((v >> 8) | (v << 8));
+    }
+
     static std::uint16_t read_u16(const std::byte* p) {
         std::uint16_t val;
         std::memcpy(&val, p, sizeof(val));
-        return std::byteswap(val);
+        return bswap16(val);
     }
 
     static std::uint32_t read_u32(const std::byte* p) {
-        return (static_cast<std::uint32_t>(p[0]) << 24)
-             | (static_cast<std::uint32_t>(p[1]) << 16)
-             | (static_cast<std::uint32_t>(p[2]) << 8)
-             |  static_cast<std::uint32_t>(p[3]);
+        return (static_cast<std::uint32_t>(std::to_integer<std::uint8_t>(p[0])) << 24)
+             | (static_cast<std::uint32_t>(std::to_integer<std::uint8_t>(p[1])) << 16)
+             | (static_cast<std::uint32_t>(std::to_integer<std::uint8_t>(p[2])) << 8)
+             |  static_cast<std::uint32_t>(std::to_integer<std::uint8_t>(p[3]));
     }
 
     static std::uint32_t swap32(std::uint32_t v) {
@@ -110,7 +113,7 @@ private:
         auto ip_start = offset;
         if (len_ < ip_start + 20) return;
 
-        auto ihl_byte = static_cast<std::uint8_t>(data_[ip_start]);
+        auto ihl_byte = std::to_integer<std::uint8_t>(data_[ip_start]);
         auto ip_version = (ihl_byte >> 4) & 0x0F;
         if (ip_version != 4) return;
 
@@ -124,7 +127,7 @@ private:
         auto available = len_ - ip_start;
         if (ip_total_len > available) ip_total_len = available;
 
-        ip_protocol = static_cast<std::uint8_t>(data_[ip_start + 9]);
+        ip_protocol = std::to_integer<std::uint8_t>(data_[ip_start + 9]);
 
         // src_ip and dst_ip in network byte order (raw memcpy)
         std::memcpy(&src_ip, data_ + ip_start + 12, 4);
@@ -157,7 +160,7 @@ private:
             src_port = read_u16(data_ + l4_start);
             dst_port = read_u16(data_ + l4_start + 2);
 
-            auto data_offset_byte = static_cast<std::uint8_t>(data_[l4_start + 12]);
+            auto data_offset_byte = std::to_integer<std::uint8_t>(data_[l4_start + 12]);
             auto tcp_hdr_len = static_cast<std::uint32_t>((data_offset_byte >> 4) & 0x0F) * 4;
             if (tcp_hdr_len < 20) return;
             if (len_ < l4_start + tcp_hdr_len) return;

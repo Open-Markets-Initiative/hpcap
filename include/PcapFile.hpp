@@ -4,7 +4,6 @@
 #include "PcapBuffer.hpp"
 #include "decompressor/Detect.hpp"
 
-#include <bit>
 #include <cstring>
 #include <stdexcept>
 #include <string>
@@ -63,9 +62,31 @@ private:
     std::vector<InterfaceInfo> interfaces_;
 
     // --- Endian helpers ---
-    std::uint16_t fix16(std::uint16_t v) const { return swap_bytes_ ? std::byteswap(v) : v; }
-    std::uint32_t fix32(std::uint32_t v) const { return swap_bytes_ ? std::byteswap(v) : v; }
-    std::uint64_t fix64(std::uint64_t v) const { return swap_bytes_ ? std::byteswap(v) : v; }
+    static std::uint16_t bswap16(std::uint16_t v) {
+        return static_cast<std::uint16_t>((v >> 8) | (v << 8));
+    }
+
+    static std::uint32_t bswap32(std::uint32_t v) {
+        return ((v >> 24) & 0x000000FFu)
+             | ((v >> 8)  & 0x0000FF00u)
+             | ((v << 8)  & 0x00FF0000u)
+             | ((v << 24) & 0xFF000000u);
+    }
+
+    static std::uint64_t bswap64(std::uint64_t v) {
+        return ((v >> 56) & 0x00000000000000FFull)
+             | ((v >> 40) & 0x000000000000FF00ull)
+             | ((v >> 24) & 0x0000000000FF0000ull)
+             | ((v >> 8)  & 0x00000000FF000000ull)
+             | ((v << 8)  & 0x000000FF00000000ull)
+             | ((v << 24) & 0x0000FF0000000000ull)
+             | ((v << 40) & 0x00FF000000000000ull)
+             | ((v << 56) & 0xFF00000000000000ull);
+    }
+
+    std::uint16_t fix16(std::uint16_t v) const { return swap_bytes_ ? bswap16(v) : v; }
+    std::uint32_t fix32(std::uint32_t v) const { return swap_bytes_ ? bswap32(v) : v; }
+    std::uint64_t fix64(std::uint64_t v) const { return swap_bytes_ ? bswap64(v) : v; }
 
     // --- Header parsing ---
 
@@ -227,7 +248,7 @@ private:
             if (pos + opt_len > opts_len) break;
 
             if (opt_code == 9 && opt_len == 1) {
-                auto val = static_cast<std::uint8_t>(opts[pos]);
+                auto val = std::to_integer<std::uint8_t>(opts[pos]);
                 if (val & 0x80) {
                     iface.ts_resol = 1ULL << (val & 0x7f);
                 } else {
@@ -253,6 +274,16 @@ private:
         ts_high  = fix32(ts_high);
         ts_low   = fix32(ts_low);
         caplen   = fix32(caplen);
+
+        if (block_len < 32) {
+            return false;
+        }
+
+        auto padded_caplen = (caplen + 3u) & ~std::uint32_t{3};
+        auto available_packet_bytes = block_len - 32u;
+        if (padded_caplen > available_packet_bytes) {
+            return false;
+        }
 
         pkt_data_ = block + 28;
         pkt_len_  = caplen;

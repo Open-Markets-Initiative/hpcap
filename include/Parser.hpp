@@ -1,10 +1,9 @@
 #pragma once
 
 #include "PcapFile.hpp"
-#include "Frame.hpp"
-#include "Settings.hpp"
-#include "Result.hpp"
+#include "frame.hpp"
 
+#include <string>
 namespace packet {
 
     // pcap parser
@@ -13,28 +12,20 @@ namespace packet {
         packet::PcapFile pcap;
         packet::Frame current_frame;
 
-        const packet::Options& options;
+        explicit Parser(const std::string& path)
+          : pcap{ path } {}
 
-        explicit Parser(const packet::Options& options)
-          : options{ options }, pcap{ options.file } {}
-
-        // load next pcap frame
+        // Advance to the next packet and refresh the cached frame view.
         bool next() {
-            return pcap.advance();
-        }
-
-        // parse frame and identify protocol
-        result identify() {
-            current_frame = packet::Frame{ pcap.data(), pcap.length() };
-
-            if (current_frame.is_udp()) {
-                return result::nasdaq_nsmequities_totalview_itch_v5_0;
+            if (!pcap.advance()) {
+                current_frame = packet::Frame{};
+                return false;
             }
-
-            return result::unknown;
+            current_frame = packet::Frame{ pcap.data(), pcap.length() };
+            return true;
         }
 
-        // get current frame
+        // Get the frame view for the most recent successful next().
         const Frame& frame() const {
             return current_frame;
         }
