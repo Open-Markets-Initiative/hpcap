@@ -1,7 +1,7 @@
 #pragma once
 
 #include "PcapFile.hpp"
-#include "frame.hpp"
+#include "Frame.hpp"
 
 #include <string>
 namespace packet {

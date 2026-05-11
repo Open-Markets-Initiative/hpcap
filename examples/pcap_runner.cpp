@@ -1,5 +1,5 @@
 #include "PcapFile.hpp"
-#include "frame.hpp"
+#include "Frame.hpp"
 
 #include <algorithm>
 #include <chrono>

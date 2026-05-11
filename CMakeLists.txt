@@ -13,7 +13,7 @@ option(HPCAP_ENABLE_LZMA "Enable lzma/xz support" OFF)
 add_library(hpcap INTERFACE)
 add_library(hpcap::hpcap ALIAS hpcap)
 
-target_compile_features(hpcap INTERFACE cxx_std_20)
+target_compile_features(hpcap INTERFACE cxx_std_23)
 target_include_directories(hpcap
     INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

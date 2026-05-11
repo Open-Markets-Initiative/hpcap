@@ -3,8 +3,9 @@
 // Zero-copy ethernet frame dissector
 // Parses: Ethernet II -> optional 802.1Q VLAN -> IPv4 -> UDP/TCP
 // All pointers reference the original buffer — no copies
-// Self-contained byte-order helpers via memcpy + shift-or
+// Self-contained byte-order helpers via memcpy + std::byteswap
 
+#include <bit>
 #include <cstddef>
 #include <cstdint>
 #include <cstring>
@@ -30,8 +31,8 @@ struct Frame {
     bool is_udp() const { return ip_protocol == 17; }
     bool is_tcp() const { return ip_protocol == 6; }
 
-    std::uint32_t src_ip_host() const { return swap32(src_ip); }
-    std::uint32_t dst_ip_host() const { return swap32(dst_ip); }
+    std::uint32_t src_ip_host() const { return network_to_host(src_ip); }
+    std::uint32_t dst_ip_host() const { return network_to_host(dst_ip); }
 
     struct IpOctets {
         std::uint8_t a, b, c, d;
@@ -63,30 +64,19 @@ private:
 
     // --- Self-contained byte-order helpers ---
 
-    static std::uint16_t bswap16(std::uint16_t v) {
-        return static_cast<std::uint16_t>((v >> 8) | (v << 8));
-    }
-
     static std::uint16_t read_u16(const std::byte* p) {
         std::uint16_t val;
         std::memcpy(&val, p, sizeof(val));
-        return bswap16(val);
+        return std::byteswap(val);
     }
 
-    static std::uint32_t read_u32(const std::byte* p) {
-        return (static_cast<std::uint32_t>(std::to_integer<std::uint8_t>(p[0])) << 24)
-             | (static_cast<std::uint32_t>(std::to_integer<std::uint8_t>(p[1])) << 16)
-             | (static_cast<std::uint32_t>(std::to_integer<std::uint8_t>(p[2])) << 8)
-             |  static_cast<std::uint32_t>(std::to_integer<std::uint8_t>(p[3]));
+    static std::uint32_t network_to_host(std::uint32_t v) {
+        if constexpr (std::endian::native == std::endian::little) {
+            return std::byteswap(v);
+        } else {
+            return v;
+        }
     }
-
-    static std::uint32_t swap32(std::uint32_t v) {
-        return ((v >> 24) & 0xFF)
-             | ((v >>  8) & 0xFF00)
-             | ((v <<  8) & 0xFF0000)
-             | ((v << 24) & 0xFF000000u);
-    }
-
     // --- Parse logic ---
 
     void parse() {

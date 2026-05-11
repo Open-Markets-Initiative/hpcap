@@ -62,31 +62,9 @@ private:
     std::vector<InterfaceInfo> interfaces_;
 
     // --- Endian helpers ---
-    static std::uint16_t bswap16(std::uint16_t v) {
-        return static_cast<std::uint16_t>((v >> 8) | (v << 8));
-    }
+    std::uint16_t fix16(std::uint16_t v) const { return swap_bytes_ ? std::byteswap(v) : v; }
+    std::uint32_t fix32(std::uint32_t v) const { return swap_bytes_ ? std::byteswap(v) : v; }
 
-    static std::uint32_t bswap32(std::uint32_t v) {
-        return ((v >> 24) & 0x000000FFu)
-             | ((v >> 8)  & 0x0000FF00u)
-             | ((v << 8)  & 0x00FF0000u)
-             | ((v << 24) & 0xFF000000u);
-    }
-
-    static std::uint64_t bswap64(std::uint64_t v) {
-        return ((v >> 56) & 0x00000000000000FFull)
-             | ((v >> 40) & 0x000000000000FF00ull)
-             | ((v >> 24) & 0x0000000000FF0000ull)
-             | ((v >> 8)  & 0x00000000FF000000ull)
-             | ((v << 8)  & 0x000000FF00000000ull)
-             | ((v << 24) & 0x0000FF0000000000ull)
-             | ((v << 40) & 0x00FF000000000000ull)
-             | ((v << 56) & 0xFF00000000000000ull);
-    }
-
-    std::uint16_t fix16(std::uint16_t v) const { return swap_bytes_ ? bswap16(v) : v; }
-    std::uint32_t fix32(std::uint32_t v) const { return swap_bytes_ ? bswap32(v) : v; }
-    std::uint64_t fix64(std::uint64_t v) const { return swap_bytes_ ? bswap64(v) : v; }
 
     // --- Header parsing ---
 

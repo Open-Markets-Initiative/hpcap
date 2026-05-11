@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/socce/OneDrive/Desktop/OMI/hpcap/build/pcap_roundtrip_tests[1]_tests.cmake")
+  include("C:/Users/socce/OneDrive/Desktop/OMI/hpcap/build/pcap_roundtrip_tests[1]_tests.cmake")
+else()
+  add_test(pcap_roundtrip_tests_NOT_BUILT pcap_roundtrip_tests_NOT_BUILT)
+endif()

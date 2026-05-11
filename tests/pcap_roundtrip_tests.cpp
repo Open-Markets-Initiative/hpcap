@@ -1,5 +1,6 @@
 #include "PcapFile.hpp"
-#include "frame.hpp"
+#include "compressor/Detect.hpp"
+#include "Frame.hpp"
 
 #include <gtest/gtest.h>
 
@@ -10,13 +11,26 @@
 #include <stdexcept>
 #include <vector>
 
-#include <zlib.h>
-
 namespace {
 
 struct PacketView {
     const unsigned char* data;
     std::size_t size;
+};
+
+constexpr unsigned char kUdpBytes[] = {
+    0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
+    0x08, 0x00, 0x45, 0x00, 0x00, 0x20, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
+    0x39, 0x90, 0xcd, 0xd1, 0xdf, 0x46, 0xe0, 0x00, 0x1f, 0x01, 0x37, 0xe6,
+    0x37, 0xe6, 0x00, 0x0c, 0x8e, 0x18, 0xde, 0xad, 0xbe, 0xef
+};
+
+constexpr unsigned char kTcpBytes[] = {
+    0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb,
+    0x81, 0x00, 0x00, 0x64, 0x08, 0x00, 0x45, 0x00, 0x00, 0x28, 0x12, 0x34,
+    0x40, 0x00, 0x40, 0x06, 0x00, 0x00, 0xc0, 0xa8, 0x01, 0x0a, 0xc0, 0xa8,
+    0x01, 0x14, 0x30, 0x39, 0x00, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+    0x00, 0x00, 0x50, 0x02, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
 void append_u32_le(std::vector<std::byte>& out, std::uint32_t value) {
@@ -88,26 +102,16 @@ private:
     std::filesystem::path path_;
 };
 
-class TempGzipFile {
+class TempCompressedFile {
 public:
-    TempGzipFile(const std::filesystem::path& path, const std::vector<std::byte>& bytes)
+    TempCompressedFile(const std::filesystem::path& path, const std::vector<std::byte>& bytes)
         : path_(path) {
-        gzFile file = gzopen(path_.string().c_str(), "wb");
-        if (!file) {
-            throw std::runtime_error("failed to create gzip file: " + path_.string());
-        }
-
-        auto written = gzwrite(file,
-                               reinterpret_cast<const void*>(bytes.data()),
-                               static_cast<unsigned int>(bytes.size()));
-        auto close_result = gzclose(file);
-
-        if (written == 0 || close_result != Z_OK) {
-            throw std::runtime_error("failed to write gzip file: " + path_.string());
-        }
+        auto compressor = packet::open_compressor(path_.string());
+        compressor->write(bytes.data(), bytes.size());
+        compressor->finish();
     }
 
-    ~TempGzipFile() {
+    ~TempCompressedFile() {
         std::error_code ec;
         std::filesystem::remove(path_, ec);
     }
@@ -132,31 +136,17 @@ std::uint64_t count_packets(const std::filesystem::path& path) {
 }
 
 TEST(PcapRoundTripTest, RawAndGzipPacketCountsMatch) {
-    unsigned char udp_bytes[] = {
-        0x01, 0x00, 0x5e, 0x00, 0x1f, 0x01, 0x00, 0x1c, 0x73, 0x15, 0x3c, 0x4c,
-        0x08, 0x00, 0x45, 0x00, 0x00, 0x20, 0x59, 0x73, 0x40, 0x00, 0x3a, 0x11,
-        0x39, 0x90, 0xcd, 0xd1, 0xdf, 0x46, 0xe0, 0x00, 0x1f, 0x01, 0x37, 0xe6,
-        0x37, 0xe6, 0x00, 0x0c, 0x8e, 0x18, 0xde, 0xad, 0xbe, 0xef
-    };
-    unsigned char tcp_bytes[] = {
-        0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb,
-        0x81, 0x00, 0x00, 0x64, 0x08, 0x00, 0x45, 0x00, 0x00, 0x28, 0x12, 0x34,
-        0x40, 0x00, 0x40, 0x06, 0x00, 0x00, 0xc0, 0xa8, 0x01, 0x0a, 0xc0, 0xa8,
-        0x01, 0x14, 0x30, 0x39, 0x00, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-        0x00, 0x00, 0x50, 0x02, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00
-    };
-
     std::vector<PacketView> packets;
     packets.reserve(512);
     for (int i = 0; i < 256; ++i) {
-        packets.push_back({udp_bytes, sizeof(udp_bytes)});
-        packets.push_back({tcp_bytes, sizeof(tcp_bytes)});
+        packets.push_back({kUdpBytes, sizeof(kUdpBytes)});
+        packets.push_back({kTcpBytes, sizeof(kTcpBytes)});
     }
 
     auto raw_bytes = make_classic_pcap(packets);
     auto temp_dir = std::filesystem::temp_directory_path();
     TempFile raw_file(temp_dir / "hpcap_roundtrip_test.pcap", raw_bytes);
-    TempGzipFile gzip_file(temp_dir / "hpcap_roundtrip_test.pcap.gz", raw_bytes);
+    TempCompressedFile gzip_file(temp_dir / "hpcap_roundtrip_test.pcap.gz", raw_bytes);
 
     const auto raw_count = count_packets(raw_file.path());
     const auto gzip_count = count_packets(gzip_file.path());
@@ -164,5 +154,28 @@ TEST(PcapRoundTripTest, RawAndGzipPacketCountsMatch) {
     EXPECT_EQ(raw_count, packets.size());
     EXPECT_EQ(gzip_count, packets.size());
     EXPECT_EQ(raw_count, gzip_count);
+}
+
+TEST(PcapRoundTripTest, RuntimeGzipCompressionPreservesPacketCountAfterDecompression) {
+    std::vector<PacketView> packets;
+    packets.reserve(128);
+    for (int i = 0; i < 64; ++i) {
+        packets.push_back({kUdpBytes, sizeof(kUdpBytes)});
+        packets.push_back({kTcpBytes, sizeof(kTcpBytes)});
+    }
+
+    auto raw_bytes = make_classic_pcap(packets);
+    auto temp_dir = std::filesystem::temp_directory_path();
+    TempFile raw_file(temp_dir / "hpcap_count_before_compression.pcap", raw_bytes);
+
+    const auto before_compression_count = count_packets(raw_file.path());
+    ASSERT_EQ(before_compression_count, packets.size());
+
+    TempCompressedFile gzip_file(temp_dir / "hpcap_count_after_compression.pcap.gz", raw_bytes);
+    ASSERT_LT(std::filesystem::file_size(gzip_file.path()), raw_bytes.size());
+
+    const auto after_decompression_count = count_packets(gzip_file.path());
+    EXPECT_EQ(after_decompression_count, before_compression_count);
+    EXPECT_EQ(after_decompression_count, packets.size());
 }
 } // namespace

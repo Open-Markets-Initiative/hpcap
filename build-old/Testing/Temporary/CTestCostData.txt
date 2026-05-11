@@ -1,0 +1,11 @@
+FrameTest.UdpFrame 1 0.123423
+FrameTest.VlanTcpFrame 1 0.0964878
+FrameTest.TruncatedFrame 1 0.0916322
+FrameTest.NonIpv4Frame 1 0.0903908
+FrameTest.TruncatedUdpHeader 1 0.0997228
+FrameTest.NonUdpTcpIpv4Frame 1 0.0859114
+PcapTest.ReadsPacketsFromClassicPcap 1 0.022181
+PcapTest.ParserTracksCurrentFrame 1 0.0198134
+PcapRoundTripTest.RawAndGzipPacketCountsMatch 1 0.0252094
+PcapRoundTripTest.RuntimeGzipCompressionPreservesPacketCountAfterDecompression 1 0.0336055
+---

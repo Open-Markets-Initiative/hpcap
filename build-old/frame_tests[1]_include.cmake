@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/socce/OneDrive/Desktop/OMI/hpcap/build/frame_tests[1]_tests.cmake")
+  include("C:/Users/socce/OneDrive/Desktop/OMI/hpcap/build/frame_tests[1]_tests.cmake")
+else()
+  add_test(frame_tests_NOT_BUILT frame_tests_NOT_BUILT)
+endif()

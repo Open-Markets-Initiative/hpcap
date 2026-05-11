@@ -1,0 +1,5 @@
+add_test([=[PcapRoundTripTest.RawAndGzipPacketCountsMatch]=]  C:/Users/socce/OneDrive/Desktop/OMI/hpcap/build/Debug/pcap_roundtrip_tests.exe [==[--gtest_filter=PcapRoundTripTest.RawAndGzipPacketCountsMatch]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PcapRoundTripTest.RawAndGzipPacketCountsMatch]=]  PROPERTIES WORKING_DIRECTORY C:/Users/socce/OneDrive/Desktop/OMI/hpcap/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[PcapRoundTripTest.RuntimeGzipCompressionPreservesPacketCountAfterDecompression]=]  C:/Users/socce/OneDrive/Desktop/OMI/hpcap/build/Debug/pcap_roundtrip_tests.exe [==[--gtest_filter=PcapRoundTripTest.RuntimeGzipCompressionPreservesPacketCountAfterDecompression]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PcapRoundTripTest.RuntimeGzipCompressionPreservesPacketCountAfterDecompression]=]  PROPERTIES WORKING_DIRECTORY C:/Users/socce/OneDrive/Desktop/OMI/hpcap/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  pcap_roundtrip_tests_TESTS PcapRoundTripTest.RawAndGzipPacketCountsMatch PcapRoundTripTest.RuntimeGzipCompressionPreservesPacketCountAfterDecompression)
