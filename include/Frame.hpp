@@ -64,10 +64,12 @@ private:
 
     // --- Self-contained byte-order helpers ---
 
-    static std::uint16_t read_u16(const std::byte* p) {
-        std::uint16_t val;
-        std::memcpy(&val, p, sizeof(val));
-        return std::byteswap(val);
+    static std::uint16_t network_to_host(std::uint16_t v) {
+        if constexpr (std::endian::native == std::endian::little) {
+            return std::byteswap(v);
+        } else {
+            return v;
+        }
     }
 
     static std::uint32_t network_to_host(std::uint32_t v) {
@@ -77,6 +79,12 @@ private:
             return v;
         }
     }
+
+    static std::uint16_t read_be16(const std::byte* p) {
+        std::uint16_t val;
+        std::memcpy(&val, p, sizeof(val));
+        return network_to_host(val);
+    }
     // --- Parse logic ---
 
     void parse() {
@@ -84,15 +92,15 @@ private:
         if (!data_ || len_ < 14) return;
 
         std::uint32_t offset = 12;
-        auto ethertype = read_u16(data_ + offset);
+        auto ethertype = read_be16(data_ + offset);
         offset += 2;
 
         // 802.1Q VLAN tag
         if (ethertype == 0x8100) {
             if (len_ < offset + 4) return;
-            auto tci = read_u16(data_ + offset);
+            auto tci = read_be16(data_ + offset);
             vlan_id = tci & 0x0FFF;
-            ethertype = read_u16(data_ + offset + 2);
+            ethertype = read_be16(data_ + offset + 2);
             offset += 4;
         }
 
@@ -111,7 +119,7 @@ private:
         if (ip_hdr_len < 20) return;
         if (len_ < ip_start + ip_hdr_len) return;
 
-        auto ip_total_len = static_cast<std::uint32_t>(read_u16(data_ + ip_start + 2));
+        auto ip_total_len = static_cast<std::uint32_t>(read_be16(data_ + ip_start + 2));
 
         // Clamp to capture length (truncated captures stay valid)
         auto available = len_ - ip_start;
@@ -130,10 +138,10 @@ private:
             if (ip_total_len < ip_hdr_len + 8) return;
             if (len_ < l4_start + 8) return;
 
-            src_port = read_u16(data_ + l4_start);
-            dst_port = read_u16(data_ + l4_start + 2);
+            src_port = read_be16(data_ + l4_start);
+            dst_port = read_be16(data_ + l4_start + 2);
 
-            auto udp_len = static_cast<std::uint32_t>(read_u16(data_ + l4_start + 4));
+            auto udp_len = static_cast<std::uint32_t>(read_be16(data_ + l4_start + 4));
 
             // Clamp UDP length to IP total length
             auto max_udp = ip_total_len - ip_hdr_len;
@@ -147,8 +155,8 @@ private:
             if (ip_total_len < ip_hdr_len + 20) return;
             if (len_ < l4_start + 20) return;
 
-            src_port = read_u16(data_ + l4_start);
-            dst_port = read_u16(data_ + l4_start + 2);
+            src_port = read_be16(data_ + l4_start);
+            dst_port = read_be16(data_ + l4_start + 2);
 
             auto data_offset_byte = std::to_integer<std::uint8_t>(data_[l4_start + 12]);
             auto tcp_hdr_len = static_cast<std::uint32_t>((data_offset_byte >> 4) & 0x0F) * 4;

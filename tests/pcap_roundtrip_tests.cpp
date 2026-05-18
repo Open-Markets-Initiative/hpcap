@@ -9,6 +9,7 @@
 #include <filesystem>
 #include <fstream>
 #include <stdexcept>
+#include <string>
 #include <vector>
 
 namespace {
@@ -135,35 +136,57 @@ std::uint64_t count_packets(const std::filesystem::path& path) {
     return count;
 }
 
-TEST(PcapRoundTripTest, RawAndGzipPacketCountsMatch) {
+std::vector<PacketView> make_packets(int pair_count) {
     std::vector<PacketView> packets;
-    packets.reserve(512);
-    for (int i = 0; i < 256; ++i) {
+    packets.reserve(static_cast<std::size_t>(pair_count) * 2);
+    for (int i = 0; i < pair_count; ++i) {
         packets.push_back({kUdpBytes, sizeof(kUdpBytes)});
         packets.push_back({kTcpBytes, sizeof(kTcpBytes)});
     }
-
-    auto raw_bytes = make_classic_pcap(packets);
-    auto temp_dir = std::filesystem::temp_directory_path();
-    TempFile raw_file(temp_dir / "hpcap_roundtrip_test.pcap", raw_bytes);
-    TempCompressedFile gzip_file(temp_dir / "hpcap_roundtrip_test.pcap.gz", raw_bytes);
-
-    const auto raw_count = count_packets(raw_file.path());
-    const auto gzip_count = count_packets(gzip_file.path());
-
-    EXPECT_EQ(raw_count, packets.size());
-    EXPECT_EQ(gzip_count, packets.size());
-    EXPECT_EQ(raw_count, gzip_count);
+    return packets;
 }
 
-TEST(PcapRoundTripTest, RuntimeGzipCompressionPreservesPacketCountAfterDecompression) {
-    std::vector<PacketView> packets;
-    packets.reserve(128);
-    for (int i = 0; i < 64; ++i) {
-        packets.push_back({kUdpBytes, sizeof(kUdpBytes)});
-        packets.push_back({kTcpBytes, sizeof(kTcpBytes)});
-    }
+std::vector<std::string> enabled_roundtrip_extensions() {
+    std::vector<std::string> extensions{".pcap"};
+#ifdef HAS_ZLIB
+    extensions.push_back(".pcap.gz");
+#endif
+#ifdef HAS_BZIP2
+    extensions.push_back(".pcap.bz2");
+#endif
+#ifdef HAS_LZMA
+    extensions.push_back(".pcap.xz");
+#endif
+#ifdef HAS_LZ4
+    extensions.push_back(".pcap.lz4");
+#endif
+#ifdef HAS_ZSTD
+    extensions.push_back(".pcap.zst");
+#endif
+    return extensions;
+}
 
+TEST(PcapRoundTripTest, EnabledCompressionFormatsPreservePacketCounts) {
+    auto packets = make_packets(256);
+    auto raw_bytes = make_classic_pcap(packets);
+    auto temp_dir = std::filesystem::temp_directory_path();
+    TempFile raw_file(temp_dir / "hpcap_roundtrip_baseline.pcap", raw_bytes);
+
+    const auto raw_count = count_packets(raw_file.path());
+    EXPECT_EQ(raw_count, packets.size());
+
+    for (const auto& extension : enabled_roundtrip_extensions()) {
+        auto path = temp_dir / ("hpcap_roundtrip_test" + extension);
+        TempCompressedFile roundtrip_file(path, raw_bytes);
+
+        const auto roundtrip_count = count_packets(roundtrip_file.path());
+        EXPECT_EQ(roundtrip_count, packets.size()) << extension;
+        EXPECT_EQ(roundtrip_count, raw_count) << extension;
+    }
+}
+
+TEST(PcapRoundTripTest, RuntimeCompressionProducesReadableFiles) {
+    auto packets = make_packets(64);
     auto raw_bytes = make_classic_pcap(packets);
     auto temp_dir = std::filesystem::temp_directory_path();
     TempFile raw_file(temp_dir / "hpcap_count_before_compression.pcap", raw_bytes);
@@ -171,11 +194,14 @@ TEST(PcapRoundTripTest, RuntimeGzipCompressionPreservesPacketCountAfterDecompres
     const auto before_compression_count = count_packets(raw_file.path());
     ASSERT_EQ(before_compression_count, packets.size());
 
-    TempCompressedFile gzip_file(temp_dir / "hpcap_count_after_compression.pcap.gz", raw_bytes);
-    ASSERT_LT(std::filesystem::file_size(gzip_file.path()), raw_bytes.size());
+    for (const auto& extension : enabled_roundtrip_extensions()) {
+        auto path = temp_dir / ("hpcap_count_after_compression" + extension);
+        TempCompressedFile roundtrip_file(path, raw_bytes);
+        ASSERT_GT(std::filesystem::file_size(roundtrip_file.path()), 0u) << extension;
 
-    const auto after_decompression_count = count_packets(gzip_file.path());
-    EXPECT_EQ(after_decompression_count, before_compression_count);
-    EXPECT_EQ(after_decompression_count, packets.size());
+        const auto after_decompression_count = count_packets(roundtrip_file.path());
+        EXPECT_EQ(after_decompression_count, before_compression_count) << extension;
+        EXPECT_EQ(after_decompression_count, packets.size()) << extension;
+    }
 }
 } // namespace
