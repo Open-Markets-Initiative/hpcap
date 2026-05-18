@@ -1,0 +1,5 @@
+add_test([=[PcapTest.ReadsPacketsFromClassicPcap]=]  C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/pcap_tests.exe [==[--gtest_filter=PcapTest.ReadsPacketsFromClassicPcap]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PcapTest.ReadsPacketsFromClassicPcap]=]  PROPERTIES DEF_SOURCE_LINE [==[C:\Users\socce\Desktop\OMI\hpcap\tests\pcap_tests.cpp:87]==] WORKING_DIRECTORY C:/Users/socce/Desktop/OMI/hpcap/build-check SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[PcapTest.ParserTracksCurrentFrame]=]  C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/pcap_tests.exe [==[--gtest_filter=PcapTest.ParserTracksCurrentFrame]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[PcapTest.ParserTracksCurrentFrame]=]  PROPERTIES DEF_SOURCE_LINE [==[C:\Users\socce\Desktop\OMI\hpcap\tests\pcap_tests.cpp:127]==] WORKING_DIRECTORY C:/Users/socce/Desktop/OMI/hpcap/build-check SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  pcap_tests_TESTS PcapTest.ReadsPacketsFromClassicPcap PcapTest.ParserTracksCurrentFrame)

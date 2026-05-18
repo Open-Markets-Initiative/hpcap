@@ -1,0 +1,42 @@
+{
+  "tests": 6,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "FrameTest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "UdpFrame",
+          "file": "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\tests\\frame_tests.cpp",
+          "line": 8
+        },
+        {
+          "name": "VlanTcpFrame",
+          "file": "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\tests\\frame_tests.cpp",
+          "line": 39
+        },
+        {
+          "name": "TruncatedFrame",
+          "file": "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\tests\\frame_tests.cpp",
+          "line": 60
+        },
+        {
+          "name": "NonIpv4Frame",
+          "file": "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\tests\\frame_tests.cpp",
+          "line": 68
+        },
+        {
+          "name": "TruncatedUdpHeader",
+          "file": "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\tests\\frame_tests.cpp",
+          "line": 80
+        },
+        {
+          "name": "NonUdpTcpIpv4Frame",
+          "file": "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\tests\\frame_tests.cpp",
+          "line": 94
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2629 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
+      Build started 5/11/2026 4:51:27 PM.
+      
+      Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.1.2-msvc8\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.1.2-msvc8\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.1.2-msvc8\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.17
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/4.1.2-msvc8/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/lld-link.com"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/lld-link.exe"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link.com"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link.exe"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link"
+      - "C:/Windows/SysWOW64/lld-link.com"
+      - "C:/Windows/SysWOW64/lld-link.exe"
+      - "C:/Windows/SysWOW64/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/SysWOW64/wbem/lld-link.com"
+      - "C:/Windows/SysWOW64/wbem/lld-link.exe"
+      - "C:/Windows/SysWOW64/wbem/lld-link"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.com"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link.com"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link.exe"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link"
+      - "C:/Users/socce/.dotnet/tools/lld-link.com"
+      - "C:/Users/socce/.dotnet/tools/lld-link.exe"
+      - "C:/Users/socce/.dotnet/tools/lld-link"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/lld-link.com"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/lld-link.exe"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/mt.com"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/mt.exe"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/mt"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/mt.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/mt.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/mt"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/mt.com"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/mt.exe"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/mt"
+      - "C:/Windows/SysWOW64/mt.com"
+      - "C:/Windows/SysWOW64/mt.exe"
+      - "C:/Windows/SysWOW64/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/SysWOW64/wbem/mt.com"
+      - "C:/Windows/SysWOW64/wbem/mt.exe"
+      - "C:/Windows/SysWOW64/wbem/mt"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/SysWOW64/OpenSSH/mt.com"
+      - "C:/Windows/SysWOW64/OpenSSH/mt.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/mt"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/mt"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/mt"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/mt.com"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/mt.exe"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Program Files/nodejs/mt.com"
+      - "C:/Program Files/nodejs/mt.exe"
+      - "C:/Program Files/nodejs/mt"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/mt.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/mt.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/mt"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/mt.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/mt.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/mt"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/mt.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/mt.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/mt"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/mt.com"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/mt.exe"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/mt"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/mt.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/mt.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/mt"
+      - "C:/Users/socce/AppData/Local/Python/bin/mt.com"
+      - "C:/Users/socce/AppData/Local/Python/bin/mt.exe"
+      - "C:/Users/socce/AppData/Local/Python/bin/mt"
+      - "C:/Users/socce/.dotnet/tools/mt.com"
+      - "C:/Users/socce/.dotnet/tools/mt.exe"
+      - "C:/Users/socce/.dotnet/tools/mt"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/mt.com"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/mt.exe"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/mt"
+      - "C:/Users/socce/AppData/Roaming/npm/mt.com"
+      - "C:/Users/socce/AppData/Roaming/npm/mt.exe"
+      - "C:/Users/socce/AppData/Roaming/npm/mt"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/mt.com"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/mt.exe"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:581 (enable_language)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:554 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC-CXX.cmake:6 (__windows_compiler_msvc)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake:48 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/"
+      - "C:/Program Files (x86)/hpcap/bin/"
+      - "C:/Program Files (x86)/hpcap/sbin/"
+      - "C:/Program Files (x86)/hpcap/"
+    searched_directories:
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/rc.com"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/rc.exe"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/rc"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/rc.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/rc.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/rc"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/rc.com"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/rc.exe"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/rc"
+      - "C:/Windows/SysWOW64/rc.com"
+      - "C:/Windows/SysWOW64/rc.exe"
+      - "C:/Windows/SysWOW64/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/SysWOW64/wbem/rc.com"
+      - "C:/Windows/SysWOW64/wbem/rc.exe"
+      - "C:/Windows/SysWOW64/wbem/rc"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/SysWOW64/OpenSSH/rc.com"
+      - "C:/Windows/SysWOW64/OpenSSH/rc.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/rc"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/rc"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/rc"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/rc.com"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/rc.exe"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Program Files/nodejs/rc.com"
+      - "C:/Program Files/nodejs/rc.exe"
+      - "C:/Program Files/nodejs/rc"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/rc.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/rc.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/rc"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/rc.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/rc.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/rc"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/rc.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/rc.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/rc"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/rc.com"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/rc.exe"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/rc"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/rc.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/rc.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/rc"
+      - "C:/Users/socce/AppData/Local/Python/bin/rc.com"
+      - "C:/Users/socce/AppData/Local/Python/bin/rc.exe"
+      - "C:/Users/socce/AppData/Local/Python/bin/rc"
+      - "C:/Users/socce/.dotnet/tools/rc.com"
+      - "C:/Users/socce/.dotnet/tools/rc.exe"
+      - "C:/Users/socce/.dotnet/tools/rc"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/rc.com"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/rc.exe"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/rc"
+      - "C:/Users/socce/AppData/Roaming/npm/rc.com"
+      - "C:/Users/socce/AppData/Roaming/npm/rc.exe"
+      - "C:/Users/socce/AppData/Roaming/npm/rc"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/rc.com"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/rc.exe"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/rc"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/rc"
+      - "C:/Program Files (x86)/hpcap/bin/rc.com"
+      - "C:/Program Files (x86)/hpcap/bin/rc.exe"
+      - "C:/Program Files (x86)/hpcap/bin/rc"
+      - "C:/Program Files (x86)/hpcap/sbin/rc.com"
+      - "C:/Program Files (x86)/hpcap/sbin/rc.exe"
+      - "C:/Program Files (x86)/hpcap/sbin/rc"
+      - "C:/Program Files (x86)/hpcap/rc.com"
+      - "C:/Program Files (x86)/hpcap/rc.exe"
+      - "C:/Program Files (x86)/hpcap/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/hpcap"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-r28wtg"
+      binary: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-r28wtg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-r28wtg'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ee913.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
+        Build started 5/11/2026 4:51:28 PM.
+        
+        Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-r28wtg\\cmTC_ee913.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_ee913.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-r28wtg\\Debug\\".
+          Creating directory "cmTC_ee913.dir\\Debug\\cmTC_ee913.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ee913.dir\\Debug\\cmTC_ee913.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_ee913.dir\\Debug\\cmTC_ee913.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_ee913.dir\\Debug\\\\" /Fd"cmTC_ee913.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35725 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Fo"cmTC_ee913.dir\\Debug\\\\" /Fd"cmTC_ee913.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-r28wtg\\Debug\\cmTC_ee913.exe" /INCREMENTAL /ILK:"cmTC_ee913.dir\\Debug\\cmTC_ee913.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-r28wtg/Debug/cmTC_ee913.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-r28wtg/Debug/cmTC_ee913.lib" /MACHINE:X64  /machine:x64 cmTC_ee913.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_ee913.vcxproj -> C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-r28wtg\\Debug\\cmTC_ee913.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_ee913.dir\\Debug\\cmTC_ee913.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ee913.dir\\Debug\\cmTC_ee913.tlog\\cmTC_ee913.lastbuildstate".
+        Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-r28wtg\\cmTC_ee913.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.67
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35725.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:50 (find_package)"
+    name: "GTest"
+    configs:
+      -
+        filename: "GTestConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "gtest-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "GTest"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/pkgRedirects/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/pkgRedirects/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Meta Horizon/Support/oculus-runtime/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Meta Horizon/Support/oculus-runtime/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/wbem/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/wbem/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/HP/OMEN-Broadcast/Common/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/HP/OMEN-Broadcast/Common/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/nodejs/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Programs/Python/Python314/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Programs/Python/Python314/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Programs/Python/Launcher/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Programs/Python/Launcher/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Python/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Local/Python/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/GTestConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/gtest-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/hpcap"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/hpcap"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
+      Build started 5/11/2026 4:51:33 PM.
+      
+      Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.1.2-msvc8\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.1.2-msvc8\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.1.2-msvc8\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.66
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/4.1.2-msvc8/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/"
+      - "C:/Program Files (x86)/hpcap/bin/"
+      - "C:/Program Files (x86)/hpcap/sbin/"
+      - "C:/Program Files (x86)/hpcap/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/lld-link.com"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/lld-link.exe"
+      - "C:/Users/socce/.codex/tmp/arg0/codex-arg0YFh57T/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link.com"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link.exe"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link"
+      - "C:/Windows/SysWOW64/lld-link.com"
+      - "C:/Windows/SysWOW64/lld-link.exe"
+      - "C:/Windows/SysWOW64/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/SysWOW64/wbem/lld-link.com"
+      - "C:/Windows/SysWOW64/wbem/lld-link.exe"
+      - "C:/Windows/SysWOW64/wbem/lld-link"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.com"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link.com"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link.exe"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link"
+      - "C:/Users/socce/.dotnet/tools/lld-link.com"
+      - "C:/Users/socce/.dotnet/tools/lld-link.exe"
+      - "C:/Users/socce/.dotnet/tools/lld-link"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/lld-link.com"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/lld-link.exe"
+      - "C:/Users/socce/.vscode/extensions/openai.chatgpt-26.506.31421-win32-x64/bin/windows-x86_64/lld-link"
+      - "C:/Program Files/bin/lld-link.com"
+      - "C:/Program Files/bin/lld-link.exe"
+      - "C:/Program Files/bin/lld-link"
+      - "C:/Program Files/sbin/lld-link.com"
+      - "C:/Program Files/sbin/lld-link.exe"
+      - "C:/Program Files/sbin/lld-link"
+      - "C:/Program Files/lld-link.com"
+      - "C:/Program Files/lld-link.exe"
+      - "C:/Program Files/lld-link"
+      - "C:/Program Files (x86)/bin/lld-link.com"
+      - "C:/Program Files (x86)/bin/lld-link.exe"
+      - "C:/Program Files (x86)/bin/lld-link"
+      - "C:/Program Files (x86)/sbin/lld-link.com"
+      - "C:/Program Files (x86)/sbin/lld-link.exe"
+      - "C:/Program Files (x86)/sbin/lld-link"
+      - "C:/Program Files (x86)/lld-link.com"
+      - "C:/Program Files (x86)/lld-link.exe"
+      - "C:/Program Files (x86)/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/lld-link"
+      - "C:/Program Files (x86)/hpcap/bin/lld-link.com"
+      - "C:/Program Files (x86)/hpcap/bin/lld-link.exe"
+      - "C:/Program Files (x86)/hpcap/bin/lld-link"
+      - "C:/Program Files (x86)/hpcap/sbin/lld-link.com"
+      - "C:/Program Files (x86)/hpcap/sbin/lld-link.exe"
+      - "C:/Program Files (x86)/hpcap/sbin/lld-link"
+      - "C:/Program Files (x86)/hpcap/lld-link.com"
+      - "C:/Program Files (x86)/hpcap/lld-link.exe"
+      - "C:/Program Files (x86)/hpcap/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Users\\socce\\.codex\\tmp\\arg0\\codex-arg0YFh57T"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+        - "c:\\Users\\socce\\.vscode\\extensions\\openai.chatgpt-26.506.31421-win32-x64\\bin\\windows-x86_64"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/hpcap"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-8x8eig"
+      binary: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-8x8eig"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-8x8eig'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8a7f8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
+        Build started 5/11/2026 4:51:34 PM.
+        
+        Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-8x8eig\\cmTC_8a7f8.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_8a7f8.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-8x8eig\\Debug\\".
+          Creating directory "cmTC_8a7f8.dir\\Debug\\cmTC_8a7f8.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_8a7f8.dir\\Debug\\cmTC_8a7f8.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_8a7f8.dir\\Debug\\cmTC_8a7f8.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_8a7f8.dir\\Debug\\\\" /Fd"cmTC_8a7f8.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35725 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_8a7f8.dir\\Debug\\\\" /Fd"cmTC_8a7f8.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-8x8eig\\Debug\\cmTC_8a7f8.exe" /INCREMENTAL /ILK:"cmTC_8a7f8.dir\\Debug\\cmTC_8a7f8.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-8x8eig/Debug/cmTC_8a7f8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-8x8eig/Debug/cmTC_8a7f8.lib" /MACHINE:X64  /machine:x64 cmTC_8a7f8.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_8a7f8.vcxproj -> C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-8x8eig\\Debug\\cmTC_8a7f8.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_8a7f8.dir\\Debug\\cmTC_8a7f8.tlog\\unsuccessfulbuild".
+          Touching "cmTC_8a7f8.dir\\Debug\\cmTC_8a7f8.tlog\\cmTC_8a7f8.lastbuildstate".
+        Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-8x8eig\\cmTC_8a7f8.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.62
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35725.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake:103 (cmake_check_source_compiles)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "build-check/_deps/googletest-src/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "build-check/_deps/googletest-src/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-t8dafi"
+      binary: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-t8dafi"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-t8dafi'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6e003.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
+        Build started 5/11/2026 4:51:35 PM.
+        
+        Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\cmTC_6e003.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_6e003.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\Debug\\".
+          Creating directory "cmTC_6e003.dir\\Debug\\cmTC_6e003.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_6e003.dir\\Debug\\cmTC_6e003.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_6e003.dir\\Debug\\cmTC_6e003.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_6e003.dir\\Debug\\\\" /Fd"cmTC_6e003.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\src.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35725 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_6e003.dir\\Debug\\\\" /Fd"cmTC_6e003.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\src.c"
+          src.c
+        C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\cmTC_6e003.vcxproj]
+        Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\cmTC_6e003.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\cmTC_6e003.vcxproj" (default target) (1) ->
+        (ClCompile target) -> 
+          C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-t8dafi\\cmTC_6e003.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.50
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "build-check/_deps/googletest-src/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "build-check/_deps/googletest-src/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-47f3vc"
+      binary: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-47f3vc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-47f3vc'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_50d13.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
+        Build started 5/11/2026 4:51:35 PM.
+        
+        Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\cmTC_50d13.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_50d13.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\Debug\\".
+          Creating directory "cmTC_50d13.dir\\Debug\\cmTC_50d13.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_50d13.dir\\Debug\\cmTC_50d13.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_50d13.dir\\Debug\\cmTC_50d13.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_50d13.dir\\Debug\\\\" /Fd"cmTC_50d13.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35725 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_50d13.dir\\Debug\\\\" /Fd"cmTC_50d13.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\Debug\\cmTC_50d13.exe" /INCREMENTAL /ILK:"cmTC_50d13.dir\\Debug\\cmTC_50d13.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-47f3vc/Debug/cmTC_50d13.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-47f3vc/Debug/cmTC_50d13.lib" /MACHINE:X64  /machine:x64 cmTC_50d13.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\cmTC_50d13.vcxproj]
+        Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\cmTC_50d13.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\cmTC_50d13.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-47f3vc\\cmTC_50d13.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.58
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake:154 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/FindThreads.cmake:112 (check_library_exists)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "build-check/_deps/googletest-src/googletest/cmake/internal_utils.cmake:66 (find_package)"
+      - "build-check/_deps/googletest-src/googletest/CMakeLists.txt:83 (config_compiler_and_linker)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-5vvjhk"
+      binary: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-5vvjhk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-5vvjhk'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_68b68.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
+        Build started 5/11/2026 4:51:36 PM.
+        
+        Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\cmTC_68b68.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_68b68.dir\\Debug\\".
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\Debug\\".
+          Creating directory "cmTC_68b68.dir\\Debug\\cmTC_68b68.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_68b68.dir\\Debug\\cmTC_68b68.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_68b68.dir\\Debug\\cmTC_68b68.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_68b68.dir\\Debug\\\\" /Fd"cmTC_68b68.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\CheckFunctionExists.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35725 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_68b68.dir\\Debug\\\\" /Fd"cmTC_68b68.dir\\Debug\\vc145.pdb" /external:W1 /Gd /TC /errorReport:queue "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\CheckFunctionExists.c"
+          CheckFunctionExists.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\Debug\\cmTC_68b68.exe" /INCREMENTAL /ILK:"cmTC_68b68.dir\\Debug\\cmTC_68b68.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-5vvjhk/Debug/cmTC_68b68.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-5vvjhk/Debug/cmTC_68b68.lib" /MACHINE:X64  /machine:x64 cmTC_68b68.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\cmTC_68b68.vcxproj]
+        Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\cmTC_68b68.vcxproj" (default targets) -- FAILED.
+        
+        Build FAILED.
+        
+        "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\cmTC_68b68.vcxproj" (default target) (1) ->
+        (Link target) -> 
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-5vvjhk\\cmTC_68b68.vcxproj]
+        
+            0 Warning(s)
+            1 Error(s)
+        
+        Time Elapsed 00:00:00.52
+        
+      exitCode: 1
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      The system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: /DWIN32;/D_WINDOWS;/EHsc
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.5.4+cb4e32d21 for .NET Framework
+      Build started 5/11/2026 5:31:29 PM.
+      
+      Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.2.3-msvc3\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.56
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/4.2.3-msvc3/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
+      - "CMakeLists.txt:3 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link.com"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link.exe"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link"
+      - "C:/Windows/SysWOW64/lld-link.com"
+      - "C:/Windows/SysWOW64/lld-link.exe"
+      - "C:/Windows/SysWOW64/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/SysWOW64/wbem/lld-link.com"
+      - "C:/Windows/SysWOW64/wbem/lld-link.exe"
+      - "C:/Windows/SysWOW64/wbem/lld-link"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.com"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link.com"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link.exe"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link"
+      - "C:/Users/socce/.dotnet/tools/lld-link.com"
+      - "C:/Users/socce/.dotnet/tools/lld-link.exe"
+      - "C:/Users/socce/.dotnet/tools/lld-link"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-0aehoy"
+      binary: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-0aehoy"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-0aehoy'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9526b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.5.4+cb4e32d21 for .NET Framework
+        Build started 5/11/2026 5:31:30 PM.
+        
+        Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-0aehoy\\cmTC_9526b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-0aehoy\\Debug\\".
+          Creating directory "cmTC_9526b.dir\\Debug\\cmTC_9526b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_9526b.dir\\Debug\\cmTC_9526b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_9526b.dir\\Debug\\cmTC_9526b.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_9526b.dir\\Debug\\\\" /Fd"cmTC_9526b.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35730 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /Fo"cmTC_9526b.dir\\Debug\\\\" /Fd"cmTC_9526b.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCXXCompilerABI.cpp"
+          CMakeCXXCompilerABI.cpp
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-0aehoy\\Debug\\cmTC_9526b.exe" /INCREMENTAL /ILK:"cmTC_9526b.dir\\Debug\\cmTC_9526b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-0aehoy/Debug/cmTC_9526b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-0aehoy/Debug/cmTC_9526b.lib" /MACHINE:X64  /machine:x64 cmTC_9526b.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_9526b.vcxproj -> C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-0aehoy\\Debug\\cmTC_9526b.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_9526b.dir\\Debug\\cmTC_9526b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_9526b.dir\\Debug\\cmTC_9526b.tlog\\cmTC_9526b.lastbuildstate".
+        Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-0aehoy\\cmTC_9526b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.43
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:3 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35730.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/hpcap"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: /DWIN32;/D_WINDOWS
+      Id flags:  
+      
+      The output was:
+      0
+      MSBuild version 18.5.4+cb4e32d21 for .NET Framework
+      Build started 5/11/2026 5:31:32 PM.
+      
+      Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        Touching "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc145.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\4.2.3-msvc3\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:00.49
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/4.2.3-msvc3/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/"
+      - "C:/Windows/SysWOW64/"
+      - "C:/Windows/"
+      - "C:/Windows/SysWOW64/wbem/"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
+      - "C:/Windows/SysWOW64/OpenSSH/"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/nodejs/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/socce/AppData/Local/Python/bin/"
+      - "C:/Users/socce/.dotnet/tools/"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/"
+      - "C:/Users/socce/AppData/Roaming/npm/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/"
+      - "C:/Program Files (x86)/hpcap/bin/"
+      - "C:/Program Files (x86)/hpcap/sbin/"
+      - "C:/Program Files (x86)/hpcap/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand/lld-link"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/copilotCli/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/lld-link"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link.com"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link.exe"
+      - "C:/Program Files/Meta Horizon/Support/oculus-runtime/lld-link"
+      - "C:/Windows/SysWOW64/lld-link.com"
+      - "C:/Windows/SysWOW64/lld-link.exe"
+      - "C:/Windows/SysWOW64/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/SysWOW64/wbem/lld-link.com"
+      - "C:/Windows/SysWOW64/wbem/lld-link.exe"
+      - "C:/Windows/SysWOW64/wbem/lld-link"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.com"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link.exe"
+      - "C:/Windows/SysWOW64/OpenSSH/lld-link"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.com"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link.exe"
+      - "C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common/lld-link"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.com"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link.exe"
+      - "C:/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR/lld-link"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/Administrator/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link.com"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link.exe"
+      - "C:/Program Files/HP/OMEN-Broadcast/Common/lld-link"
+      - "C:/Program Files/Git/cmd/lld-link.com"
+      - "C:/Program Files/Git/cmd/lld-link.exe"
+      - "C:/Program Files/Git/cmd/lld-link"
+      - "C:/Program Files/dotnet/lld-link.com"
+      - "C:/Program Files/dotnet/lld-link.exe"
+      - "C:/Program Files/dotnet/lld-link"
+      - "C:/Program Files/nodejs/lld-link.com"
+      - "C:/Program Files/nodejs/lld-link.exe"
+      - "C:/Program Files/nodejs/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/Scripts/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Python314/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Python/Launcher/lld-link"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Microsoft/WindowsApps/lld-link"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Programs/Microsoft VS Code/bin/lld-link"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link.com"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link.exe"
+      - "C:/Users/socce/AppData/Local/Python/bin/lld-link"
+      - "C:/Users/socce/.dotnet/tools/lld-link.com"
+      - "C:/Users/socce/.dotnet/tools/lld-link.exe"
+      - "C:/Users/socce/.dotnet/tools/lld-link"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/TinyTeX/bin/windows/lld-link"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link.com"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link.exe"
+      - "C:/Users/socce/AppData/Roaming/npm/lld-link"
+      - "C:/Program Files/bin/lld-link.com"
+      - "C:/Program Files/bin/lld-link.exe"
+      - "C:/Program Files/bin/lld-link"
+      - "C:/Program Files/sbin/lld-link.com"
+      - "C:/Program Files/sbin/lld-link.exe"
+      - "C:/Program Files/sbin/lld-link"
+      - "C:/Program Files/lld-link.com"
+      - "C:/Program Files/lld-link.exe"
+      - "C:/Program Files/lld-link"
+      - "C:/Program Files (x86)/bin/lld-link.com"
+      - "C:/Program Files (x86)/bin/lld-link.exe"
+      - "C:/Program Files (x86)/bin/lld-link"
+      - "C:/Program Files (x86)/sbin/lld-link.com"
+      - "C:/Program Files (x86)/sbin/lld-link.exe"
+      - "C:/Program Files (x86)/sbin/lld-link"
+      - "C:/Program Files (x86)/lld-link.com"
+      - "C:/Program Files (x86)/lld-link.exe"
+      - "C:/Program Files (x86)/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/sbin/lld-link"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/lld-link"
+      - "C:/Program Files (x86)/hpcap/bin/lld-link.com"
+      - "C:/Program Files (x86)/hpcap/bin/lld-link.exe"
+      - "C:/Program Files (x86)/hpcap/bin/lld-link"
+      - "C:/Program Files (x86)/hpcap/sbin/lld-link.com"
+      - "C:/Program Files (x86)/hpcap/sbin/lld-link.exe"
+      - "C:/Program Files (x86)/hpcap/sbin/lld-link"
+      - "C:/Program Files (x86)/hpcap/lld-link.com"
+      - "C:/Program Files (x86)/hpcap/lld-link.exe"
+      - "C:/Program Files (x86)/hpcap/lld-link"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\debugCommand"
+        - "c:\\Users\\socce\\AppData\\Roaming\\Code\\User\\globalStorage\\github.copilot-chat\\copilotCli"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code"
+        - "C:\\Program Files\\Meta Horizon\\Support\\oculus-runtime"
+        - "C:\\windows\\system32"
+        - "C:\\windows"
+        - "C:\\windows\\System32\\Wbem"
+        - "C:\\windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common"
+        - "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\NvDLISR"
+        - "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\HP\\OMEN-Broadcast\\Common"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\nodejs\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Python314\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Python\\Launcher\\"
+        - "C:\\Users\\socce\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Users\\socce\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\socce\\AppData\\Local\\Python\\bin"
+        - "C:\\Users\\socce\\.dotnet\\tools"
+        - "C:\\Users\\socce\\AppData\\Roaming\\TinyTeX\\bin\\windows"
+        - "C:\\Users\\socce\\AppData\\Roaming\\npm"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/hpcap"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake"
+        - "C:/Program Files (x86)/hpcap"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-xxtwfn"
+      binary: "C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-xxtwfn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
+      CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-xxtwfn'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_60c5b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        MSBuild version 18.5.4+cb4e32d21 for .NET Framework
+        Build started 5/11/2026 5:31:33 PM.
+        
+        Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-xxtwfn\\cmTC_60c5b.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+          Creating directory "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-xxtwfn\\Debug\\".
+          Creating directory "cmTC_60c5b.dir\\Debug\\cmTC_60c5b.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_60c5b.dir\\Debug\\cmTC_60c5b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_60c5b.dir\\Debug\\cmTC_60c5b.tlog\\unsuccessfulbuild".
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_60c5b.dir\\Debug\\\\" /Fd"cmTC_60c5b.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35730 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /Fo"cmTC_60c5b.dir\\Debug\\\\" /Fd"cmTC_60c5b.dir\\Debug\\vc145.pdb" /external:W1 /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.2\\Modules\\CMakeCCompilerABI.c"
+          CMakeCCompilerABI.c
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-xxtwfn\\Debug\\cmTC_60c5b.exe" /INCREMENTAL /ILK:"cmTC_60c5b.dir\\Debug\\cmTC_60c5b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-xxtwfn/Debug/cmTC_60c5b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/socce/Desktop/OMI/hpcap/build-check/CMakeFiles/CMakeScratch/TryCompile-xxtwfn/Debug/cmTC_60c5b.lib" /MACHINE:X64  /machine:x64 cmTC_60c5b.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_60c5b.vcxproj -> C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-xxtwfn\\Debug\\cmTC_60c5b.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_60c5b.dir\\Debug\\cmTC_60c5b.tlog\\unsuccessfulbuild".
+          Touching "cmTC_60c5b.dir\\Debug\\cmTC_60c5b.tlog\\cmTC_60c5b.lastbuildstate".
+        Done Building Project "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\build-check\\CMakeFiles\\CMakeScratch\\TryCompile-xxtwfn\\cmTC_60c5b.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.40
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.2/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "build-check/_deps/googletest-src/CMakeLists.txt:6 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.50.35730.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...

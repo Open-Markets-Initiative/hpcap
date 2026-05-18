@@ -1,0 +1,9 @@
+FrameTest.UdpFrame 2 0.00550135
+FrameTest.VlanTcpFrame 2 0.00604765
+FrameTest.TruncatedFrame 2 0.00453385
+FrameTest.NonIpv4Frame 2 0.00624815
+FrameTest.TruncatedUdpHeader 2 0.00608725
+FrameTest.NonUdpTcpIpv4Frame 2 0.0045575
+PcapTest.ReadsPacketsFromClassicPcap 2 0.0048286
+PcapTest.ParserTracksCurrentFrame 2 0.0053961
+---

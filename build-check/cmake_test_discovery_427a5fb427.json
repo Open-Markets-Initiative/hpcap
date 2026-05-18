@@ -1,0 +1,22 @@
+{
+  "tests": 2,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "PcapTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "ReadsPacketsFromClassicPcap",
+          "file": "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\tests\\pcap_tests.cpp",
+          "line": 87
+        },
+        {
+          "name": "ParserTracksCurrentFrame",
+          "file": "C:\\Users\\socce\\Desktop\\OMI\\hpcap\\tests\\pcap_tests.cpp",
+          "line": 127
+        }
+      ]
+    }
+  ]
+}

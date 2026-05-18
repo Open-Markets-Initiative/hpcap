@@ -14,6 +14,9 @@ add_library(hpcap INTERFACE)
 add_library(hpcap::hpcap ALIAS hpcap)
 
 target_compile_features(hpcap INTERFACE cxx_std_23)
+if(MSVC)
+    target_compile_options(hpcap INTERFACE /std:c++latest)
+endif()
 target_include_directories(hpcap
     INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>

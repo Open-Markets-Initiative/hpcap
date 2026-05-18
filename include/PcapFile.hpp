@@ -4,6 +4,7 @@
 #include "PcapBuffer.hpp"
 #include "decompressor/Detect.hpp"
 
+#include <bit>
 #include <cstring>
 #include <stdexcept>
 #include <string>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\fab46de28406b80473488ab0fe98cc08\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\fab46de28406b80473488ab0fe98cc08\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\fab46de28406b80473488ab0fe98cc08\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\fab46de28406b80473488ab0fe98cc08\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\fab46de28406b80473488ab0fe98cc08\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\fab46de28406b80473488ab0fe98cc08\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\fab46de28406b80473488ab0fe98cc08\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\fab46de28406b80473488ab0fe98cc08\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\47310aa391e0161e7dec04fad1efa73f\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\4c5f05feb0d4208a97d91c44a3eb28be\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7DD741C0-4CEC-3C0B-B0A1-617963847BF9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

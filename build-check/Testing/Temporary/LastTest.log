@@ -1,0 +1,219 @@
+Start testing: May 13 09:50 Central Daylight Time
+----------------------------------------------------------
+1/8 Testing: FrameTest.UdpFrame
+1/8 Test: FrameTest.UdpFrame
+Command: "C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/frame_tests.exe" "--gtest_filter=FrameTest.UdpFrame" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/socce/Desktop/OMI/hpcap/build-check
+"FrameTest.UdpFrame" start time: May 13 09:50 Central Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = FrameTest.UdpFrame
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FrameTest
+[ RUN      ] FrameTest.UdpFrame
+[       OK ] FrameTest.UdpFrame (0 ms)
+[----------] 1 test from FrameTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FrameTest.UdpFrame" end time: May 13 09:50 Central Daylight Time
+"FrameTest.UdpFrame" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/8 Testing: FrameTest.VlanTcpFrame
+2/8 Test: FrameTest.VlanTcpFrame
+Command: "C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/frame_tests.exe" "--gtest_filter=FrameTest.VlanTcpFrame" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/socce/Desktop/OMI/hpcap/build-check
+"FrameTest.VlanTcpFrame" start time: May 13 09:50 Central Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = FrameTest.VlanTcpFrame
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FrameTest
+[ RUN      ] FrameTest.VlanTcpFrame
+[       OK ] FrameTest.VlanTcpFrame (0 ms)
+[----------] 1 test from FrameTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FrameTest.VlanTcpFrame" end time: May 13 09:50 Central Daylight Time
+"FrameTest.VlanTcpFrame" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/8 Testing: FrameTest.TruncatedFrame
+3/8 Test: FrameTest.TruncatedFrame
+Command: "C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/frame_tests.exe" "--gtest_filter=FrameTest.TruncatedFrame" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/socce/Desktop/OMI/hpcap/build-check
+"FrameTest.TruncatedFrame" start time: May 13 09:50 Central Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = FrameTest.TruncatedFrame
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FrameTest
+[ RUN      ] FrameTest.TruncatedFrame
+[       OK ] FrameTest.TruncatedFrame (0 ms)
+[----------] 1 test from FrameTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FrameTest.TruncatedFrame" end time: May 13 09:50 Central Daylight Time
+"FrameTest.TruncatedFrame" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/8 Testing: FrameTest.NonIpv4Frame
+4/8 Test: FrameTest.NonIpv4Frame
+Command: "C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/frame_tests.exe" "--gtest_filter=FrameTest.NonIpv4Frame" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/socce/Desktop/OMI/hpcap/build-check
+"FrameTest.NonIpv4Frame" start time: May 13 09:50 Central Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = FrameTest.NonIpv4Frame
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FrameTest
+[ RUN      ] FrameTest.NonIpv4Frame
+[       OK ] FrameTest.NonIpv4Frame (0 ms)
+[----------] 1 test from FrameTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FrameTest.NonIpv4Frame" end time: May 13 09:50 Central Daylight Time
+"FrameTest.NonIpv4Frame" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/8 Testing: FrameTest.TruncatedUdpHeader
+5/8 Test: FrameTest.TruncatedUdpHeader
+Command: "C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/frame_tests.exe" "--gtest_filter=FrameTest.TruncatedUdpHeader" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/socce/Desktop/OMI/hpcap/build-check
+"FrameTest.TruncatedUdpHeader" start time: May 13 09:50 Central Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = FrameTest.TruncatedUdpHeader
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FrameTest
+[ RUN      ] FrameTest.TruncatedUdpHeader
+[       OK ] FrameTest.TruncatedUdpHeader (0 ms)
+[----------] 1 test from FrameTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FrameTest.TruncatedUdpHeader" end time: May 13 09:50 Central Daylight Time
+"FrameTest.TruncatedUdpHeader" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/8 Testing: FrameTest.NonUdpTcpIpv4Frame
+6/8 Test: FrameTest.NonUdpTcpIpv4Frame
+Command: "C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/frame_tests.exe" "--gtest_filter=FrameTest.NonUdpTcpIpv4Frame" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/socce/Desktop/OMI/hpcap/build-check
+"FrameTest.NonUdpTcpIpv4Frame" start time: May 13 09:50 Central Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = FrameTest.NonUdpTcpIpv4Frame
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FrameTest
+[ RUN      ] FrameTest.NonUdpTcpIpv4Frame
+[       OK ] FrameTest.NonUdpTcpIpv4Frame (0 ms)
+[----------] 1 test from FrameTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"FrameTest.NonUdpTcpIpv4Frame" end time: May 13 09:50 Central Daylight Time
+"FrameTest.NonUdpTcpIpv4Frame" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/8 Testing: PcapTest.ReadsPacketsFromClassicPcap
+7/8 Test: PcapTest.ReadsPacketsFromClassicPcap
+Command: "C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/pcap_tests.exe" "--gtest_filter=PcapTest.ReadsPacketsFromClassicPcap" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/socce/Desktop/OMI/hpcap/build-check
+"PcapTest.ReadsPacketsFromClassicPcap" start time: May 13 09:50 Central Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = PcapTest.ReadsPacketsFromClassicPcap
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PcapTest
+[ RUN      ] PcapTest.ReadsPacketsFromClassicPcap
+[       OK ] PcapTest.ReadsPacketsFromClassicPcap (0 ms)
+[----------] 1 test from PcapTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"PcapTest.ReadsPacketsFromClassicPcap" end time: May 13 09:50 Central Daylight Time
+"PcapTest.ReadsPacketsFromClassicPcap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/8 Testing: PcapTest.ParserTracksCurrentFrame
+8/8 Test: PcapTest.ParserTracksCurrentFrame
+Command: "C:/Users/socce/Desktop/OMI/hpcap/build-check/Debug/pcap_tests.exe" "--gtest_filter=PcapTest.ParserTracksCurrentFrame" "--gtest_also_run_disabled_tests"
+Directory: C:/Users/socce/Desktop/OMI/hpcap/build-check
+"PcapTest.ParserTracksCurrentFrame" start time: May 13 09:50 Central Daylight Time
+Output:
+----------------------------------------------------------
+Running main() from C:\Users\socce\Desktop\OMI\hpcap\build-check\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = PcapTest.ParserTracksCurrentFrame
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PcapTest
+[ RUN      ] PcapTest.ParserTracksCurrentFrame
+[       OK ] PcapTest.ParserTracksCurrentFrame (0 ms)
+[----------] 1 test from PcapTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (1 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"PcapTest.ParserTracksCurrentFrame" end time: May 13 09:50 Central Daylight Time
+"PcapTest.ParserTracksCurrentFrame" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 13 09:50 Central Daylight Time

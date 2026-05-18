@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/socce/Desktop/OMI/hpcap/build-check/pcap_tests[1]_tests.cmake")
+  include("C:/Users/socce/Desktop/OMI/hpcap/build-check/pcap_tests[1]_tests.cmake")
+else()
+  add_test(pcap_tests_NOT_BUILT pcap_tests_NOT_BUILT)
+endif()
